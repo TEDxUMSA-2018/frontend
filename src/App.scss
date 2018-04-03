@@ -1,0 +1,8 @@
+// Main scss file, used to import mixins, global variables, and stylesheets for each
+// component.
+
+@import 'styles/_globals.scss';
+
+.main-container {
+  background-color: $mainColor;
+}
