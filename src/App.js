@@ -6,10 +6,10 @@ import {
   Link
 } from 'react-router-dom';
 
-import About from './sections/about/About';
-import Home from './sections/home/Home';
-import Speakers from './sections/speakers/Speakers';
-import Team from './sections/team/Team';
+import {
+  MENU_ROUTES,
+  COMPONENT_ROUTES
+} from './constants/Routes';
 
 class App extends React.Component {
   render() {
@@ -17,31 +17,30 @@ class App extends React.Component {
       <Router>
         <div>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/speakers">Speakers</Link>
-            </li>
+            {
+              MENU_ROUTES.map((item, index) => 
+                <li
+                  key={`menu-${index}`}
+                >
+                  <Link
+                    to={item.path}
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+            )}
           </ul>
 
           <hr/>
 
-          <Route 
-            exact path="/" 
-            component={Home}
-          />
-          <Route 
-            path="/about" 
-            component={About}
-          />
-          <Route 
-            path="/speakers" 
-            component={Speakers}
-          />
+          {
+            COMPONENT_ROUTES.map(item => 
+            <Route 
+              exact={item.exact} 
+              path={item.path} 
+              component={item.component}
+            />
+          )}
         </div>
       </Router>
     );
