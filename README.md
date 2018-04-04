@@ -7,6 +7,8 @@
 * [Reactstrap](https://reactstrap.github.io/)
 
 ## Scripts
-`npm install            // to install all the dependencies`
-`npm run start          // starts a local server and adds a css watcher`
-`npm run build          // executes a minified build of js and css files`
+```sh
+yarn install            // to install all the dependencies
+yarn start              // starts a local server and adds a css watcher
+yarn build              // executes a minified build of js and css files
+```
