@@ -1,0 +1,34 @@
+$footer_color: #d89058;
+.footer-view {
+  display: flex;
+  @extend %flex-center;
+  flex-direction: column;
+  background-color: $footer_color;
+  height: 100vh - $mainViewHeight;
+  width: 100vw;
+}
+.icons-cont {
+  display: flex;
+  @extend %flex-center;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+.base-cont {
+  width: 100%;
+  height: 20%;
+  background-color: grey;
+}
+.icon-container {
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+.contact-icon {
+  font-size: 22px;
+}
