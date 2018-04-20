@@ -1,34 +1,81 @@
 $footer_color: #d89058;
+$contact_icon_transition: background-color 0.3s ease, transform 0.3s ease;
 .footer-view {
   display: flex;
-  @extend %flex-center;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  background-color: $footer_color;
   height: 100vh - $mainViewHeight;
   width: 100vw;
 }
 .icons-cont {
+  border-top: 1px outset;
+  padding-top: 15px;
   display: flex;
-  @extend %flex-center;
-  width: 50%;
-  height: 100%;
-  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65%;
+  min-height: 65px;
 }
 .base-cont {
-  width: 100%;
-  height: 20%;
-  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 65%;
+  min-height: 30px;
 }
 .icon-container {
   display: flex;
   float: left;
   align-items: center;
   justify-content: center;
-  background-color: red;
   border-radius: 25px;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 .contact-icon {
-  font-size: 22px;
+  font-size: 24px;
+  color: whitesmoke;
+}
+.footer-logo {
+  height: 100%;
+  max-width: 40%;
+  min-width: 10%;
+}
+.copyright {
+  color: darkgray;
+  font-size: 10px;
+}
+#facebook {
+  transition: $contact_icon_transition;
+  background-color: rgba(59,89,152,0.7);
+  &:hover {
+    background-color: rgba(59,89,152,1);
+    transform: scale(1.08);
+  }
+}
+#instagram {
+  transition: $contact_icon_transition;
+  background-color: rgba(228,64,95,0.7);
+  &:hover {
+    background-color: rgba(228,64,95,1);
+    transform: scale(1.08);
+  }
+}
+#twitter {
+  transition: $contact_icon_transition;
+  background-color: rgba(85,172,238,0.7);
+  &:hover {
+    background-color: rgba(85,172,238,1);
+    transform: scale(1.08);
+  }
+}
+#email {
+  transition: $contact_icon_transition;
+  background-color: rgba(221,75,57,0.7);
+  &:hover {
+    background-color: rgba(221,75,57,1);
+    transform: scale(1.08);
+  }
 }
