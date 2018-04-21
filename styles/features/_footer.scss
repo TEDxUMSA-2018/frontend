@@ -1,19 +1,18 @@
 $footer_color: #d89058;
-$contact_icon_transition: background-color 0.3s ease, transform 0.3s ease;
 .footer-view {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   height: 100vh - $mainViewHeight;
-  width: 100vw;
+  width: 100%;
 }
 .icons-cont {
-  border-top: 1px outset;
-  padding-top: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border-top: 1px outset;
+  padding-top: 15px;
   width: 65%;
   min-height: 65px;
 }
@@ -38,44 +37,27 @@ $contact_icon_transition: background-color 0.3s ease, transform 0.3s ease;
   font-size: 24px;
   color: whitesmoke;
 }
-.footer-logo {
-  height: 100%;
-  max-width: 40%;
-  min-width: 10%;
-}
 .copyright {
   color: darkgray;
   font-size: 10px;
 }
-#facebook {
-  transition: $contact_icon_transition;
-  background-color: rgba(59,89,152,0.7);
+@mixin icon_props($r, $g, $b) {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: rgba($r,$g,$b,0.7);
   &:hover {
-    background-color: rgba(59,89,152,1);
+    background-color: rgba($r,$g,$b,1);
     transform: scale(1.08);
   }
+}
+#facebook {
+  @include icon_props(59,89,152)
 }
 #instagram {
-  transition: $contact_icon_transition;
-  background-color: rgba(228,64,95,0.7);
-  &:hover {
-    background-color: rgba(228,64,95,1);
-    transform: scale(1.08);
-  }
+  @include icon_props(228,64,95)
 }
 #twitter {
-  transition: $contact_icon_transition;
-  background-color: rgba(85,172,238,0.7);
-  &:hover {
-    background-color: rgba(85,172,238,1);
-    transform: scale(1.08);
-  }
+  @include icon_props(85,172,238)
 }
 #email {
-  transition: $contact_icon_transition;
-  background-color: rgba(221,75,57,0.7);
-  &:hover {
-    background-color: rgba(221,75,57,1);
-    transform: scale(1.08);
-  }
+  @include icon_props(221,75,57);
 }
