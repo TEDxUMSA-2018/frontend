@@ -2,7 +2,16 @@
 // component.
 
 @import 'styles/_globals.scss';
+@import '../styles/features/footer';
+
+html {
+  overflow-x: hidden;
+}
 
 .main-container {
   background-color: $mainColor;
+}
+.main-view {
+  min-height: $mainViewHeight;
+  width: 100vw;
 }

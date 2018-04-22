@@ -10,39 +10,45 @@ import {
   MENU_ROUTES,
   COMPONENT_ROUTES
 } from './constants/Routes';
+import Footer from './sections/features/Footer';
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <div>
-          <ul>
-            {
-              MENU_ROUTES.map((item, index) => 
-                <li
-                  key={`menu-${index}`}
-                >
-                  <Link
-                    to={item.path}
-                  >
-                    {item.text}
-                  </Link>
-                </li>
-            )}
-          </ul>
+      <div>
+        <div className="main-view">
+          <Router>
+            <div>
+              <ul>
+                  {
+                      MENU_ROUTES.map((item, index) =>
+                          <li
+                              key={`menu-${index}`}
+                          >
+                            <Link
+                                to={item.path}
+                            >
+                                {item.text}
+                            </Link>
+                          </li>
+                      )}
+              </ul>
 
-          <hr/>
+              <hr/>
 
-          {
-            COMPONENT_ROUTES.map(item => 
-            <Route 
-              exact={item.exact} 
-              path={item.path} 
-              component={item.component}
-            />
-          )}
+                {
+                    COMPONENT_ROUTES.map(item =>
+                        <Route
+                            exact={item.exact}
+                            path={item.path}
+                            component={item.component}
+                        />
+                    )}
+            </div>
+          </Router>
         </div>
-      </Router>
+        <Footer />
+      </div>
     );
   }
 }
