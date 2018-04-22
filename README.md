@@ -12,3 +12,5 @@ yarn install            // to install all the dependencies
 yarn start              // starts a local server and adds a css watcher
 yarn build              // executes a minified build of js and css files
 ```
+
+## Test
