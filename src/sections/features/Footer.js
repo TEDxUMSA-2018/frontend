@@ -5,17 +5,17 @@ export default class Footer extends React.Component{
         return (
             <div className='footer-view'>
                 <div className="icons-cont">
-                    <div id="facebook" class="icon-container">
-                        <i class="contact-icon fab fa-facebook-f" />
+                    <div id="facebook" className="icon-container">
+                        <i className="contact-icon fab fa-facebook-f" />
                     </div>
-                    <div id="email" class="icon-container">
-                        <i class="contact-icon fas fa-envelope" />
+                    <div id="email" className="icon-container">
+                        <i className="contact-icon fas fa-envelope" />
                     </div>
-                    <div id="instagram" class="icon-container">
-                        <i class="contact-icon fab fa-instagram" />
+                    <div id="instagram" className="icon-container">
+                        <i className="contact-icon fab fa-instagram" />
                     </div>
-                    <div id="twitter" class="icon-container">
-                        <i class="contact-icon fab fa-twitter" />
+                    <div id="twitter" className="icon-container">
+                        <i className="contact-icon fab fa-twitter" />
                     </div>
                 </div>
                 <div className="base-cont">

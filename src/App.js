@@ -2,15 +2,14 @@ import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 import {
-  MENU_ROUTES,
   COMPONENT_ROUTES
 } from './constants/Routes';
 import Footer from './sections/features/Footer';
+import OverlayMenu from './common/OverlayNavbar';
 
 class App extends React.Component {
   render() {
@@ -19,37 +18,28 @@ class App extends React.Component {
         <div className="main-view">
           <Router>
             <div>
-              <ul>
-                  {
-                      MENU_ROUTES.map((item, index) =>
-                          <li
-                              key={`menu-${index}`}
-                          >
-                            <Link
-                                to={item.path}
-                            >
-                                {item.text}
-                            </Link>
-                          </li>
-                      )}
-              </ul>
-
-              <hr/>
-
-                {
-                    COMPONENT_ROUTES.map(item =>
-                        <Route
-                            exact={item.exact}
-                            path={item.path}
-                            component={item.component}
-                        />
-                    )}
+              <OverlayMenu/>
+              { COMPONENT_ROUTES.map((item, index) =>
+                <Route
+                  key={`route-${index}`}
+                  exact={item.exact}
+                  path={item.path}
+                  component={item.component}
+                />
+              )}
             </div>
           </Router>
         </div>
         <Footer />
       </div>
     );
+  }
+
+  toggleMenu = () => {
+    const { isMenuOpen } = this.state;
+    this.setState({
+      isMenuOpen: !isMenuOpen
+    })
   }
 }
 

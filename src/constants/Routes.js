@@ -1,5 +1,3 @@
-import React from 'react';
-
 import About from '../sections/about/About';
 import Home from '../sections/home/Home';
 import Speakers from '../sections/speakers/Speakers';
