@@ -8,6 +8,7 @@ import {
 import {
   COMPONENT_ROUTES
 } from './constants/Routes';
+import OverlayNavbar from './common/OverlayNavbar'
 import Footer from './common/Footer';
 import Header from './common/Header'
 
@@ -16,9 +17,9 @@ class App extends React.Component {
     return (
       <div>
         <div className="main-view">
-          <Header />
           <Router>
             <div>
+              <Header />
               { COMPONENT_ROUTES.map((item, index) =>
                 <Route
                   key={`route-${index}`}
