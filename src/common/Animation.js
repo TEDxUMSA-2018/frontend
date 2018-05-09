@@ -33,6 +33,8 @@ const mapEasingF = (easingFunction) => {
     switch (easingFunction) {
         case 'elasticOut':
             return elasticOut;
+        case 'easeOutQuad':
+            return easeOutQuad;
         default:
             return linear;
     }
@@ -41,4 +43,5 @@ const mapEasingF = (easingFunction) => {
 // Easing Functions
 
 const elasticOut = (t) => Math.sin(-13.0 * (t + 1.0) * Math.PI/2) * Math.pow(2.0, -10.0 * t) + 1.0;
+const easeOutQuad = (t) => t*(2-t);
 const linear = (t) => t;
