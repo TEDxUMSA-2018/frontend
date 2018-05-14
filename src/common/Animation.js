@@ -1,23 +1,24 @@
-import { Observable, defer, interval, of } from 'rxjs';
-import { animationFrame } from 'rxjs/scheduler/animationFrame';
-
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/takeWhile";
+import { defer, interval, animationFrameScheduler } from 'rxjs';
+import { map, takeWhile } from 'rxjs/operators';
 
 // Exported Functions
 
 const animate = (time, easingF, dist) =>
-    duration(time).map(mapEasingF(easingF)).map(distance(dist));
+    duration(time)
+        .pipe(
+            map(mapEasingF(easingF)),
+            map(distance(dist))
+        );
 
 export { animate };
 
 // Internal Functions
 
-const msElapsed = (scheduler = animationFrame) => (
+const msElapsed = (scheduler = animationFrameScheduler) => (
     defer(() => {
         const start = scheduler.now();
         return interval(0, scheduler)
-            .map(() => scheduler.now() - start);
+            .pipe(map(() => scheduler.now() - start));
     })
 );
 
@@ -25,8 +26,10 @@ const distance = (d) => (t) => t * d;
 
 const duration = (ms) =>
     msElapsed()
-        .map(ems => ems / ms)
-        .takeWhile(t => t <= 1);
+        .pipe(
+            map(ems => ems / ms),
+            takeWhile(t => t <= 1)
+        );
 
 
 const mapEasingF = (easingFunction) => {

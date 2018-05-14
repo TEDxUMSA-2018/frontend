@@ -8,14 +8,27 @@
     width: 25%;
     margin-left: 5%;
     .event-details {
-      background-color: aliceblue;
+      position: absolute;
       width: inherit;
       .content {
       }
       .base {
         display: flex;
+        flex-flow: row wrap;
         .left-side, .righ-side {
+          display: flex;
+          justify-content: center;
           width: 50%;
+        }
+        .bottom {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 7px;
+          .bottom-content {
+            position: absolute;
+            bottom: 0;
+          }
         }
       }
     }

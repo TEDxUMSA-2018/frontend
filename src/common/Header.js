@@ -3,10 +3,9 @@ import React from 'react';
 import OverlayNavbar from './OverlayNavbar';
 import IconDetail from './IconDetail';
 import { animate } from './Animation';
-import styled from 'styled-components';
 
 export default class Header extends React.Component{
-    openAnimationTime = 300;
+    openAnimationTime = 400;
     baseHeight = 60;
     contentHeight = 240;
     state = {
@@ -16,35 +15,33 @@ export default class Header extends React.Component{
 
     baseIconSize = {text: "13px", icon: "28px"};
     render(){
-        const EventDetails = styled.div`
-            position: absolute;
-            top: ${this.state.eventHeight}px;
-            height: ${this.baseHeight + this.contentHeight}px;
-        `;
-        const EventContainer = styled.div`
-            height: ${this.baseHeight}px;
-        `;
-        const Content = styled.div`
-            height: ${this.contentHeight}px;
-        `;
-        const Base = styled.div`
-            height: ${this.baseHeight}px;
-        `;
         return (
             <div className='header'>
-                <EventContainer className='event-container'>
-                    <EventDetails
+                <div
+                    className='event-container'
+                    style={{height: this.baseHeight}}>
+                    <div
                         className="event-details"
-                        onClick={this.toggleEvent}>
-                        <Content className="content">
-                            content
-                        </Content>
-                        <Base className="base">
+                        style={{
+                            top: this.state.eventHeight + "px",
+                            height: (this.baseHeight + this.contentHeight + 10) + "px"
+                        }}
+                        onClick={this.toggleEvent.bind(this)}>
+                        <div
+                            className="content"
+                            style={{height: this.contentHeight + "px"}}>
+                            conten
+                        </div>
+                        <div
+                            className="base"
+                            style={{height: this.baseHeight}}>
                             <div className="left-side">
                                 <IconDetail
                                     text="24 de septiembre"
                                     icon="far fa-calendar"
                                     size={this.baseIconSize}
+                                    animationTime = {this.openAnimationTime}
+                                    displayText = {this.state.eventOpen}
                                 />
                             </div>
                             <div className="right-side">
@@ -52,16 +49,26 @@ export default class Header extends React.Component{
                                     text="paraninfo UMSA"
                                     icon="fas fa-map-marker-alt"
                                     size={this.baseIconSize}
+                                    animationTime = {this.openAnimationTime}
+                                    displayText = {this.state.eventOpen}
                                 />
                             </div>
-                        </Base>
-                    </EventDetails>
-                </EventContainer>
+                            <div className="bottom">
+                                <div className="bottom-content">
+                                    <IconDetail
+                                        icon="fas fa-angle-down"
+                                        size={{icon: "20px"}}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <OverlayNavbar />
             </div>
         )
     }
-    toggleEvent =  ()  => {
+    toggleEvent = (ex) => {
         const duration = this.openAnimationTime;
         if(this.state.eventOpen) {
             animate(duration,'easeOutQuad', 240).subscribe(x => {
