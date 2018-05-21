@@ -2,17 +2,16 @@
 // component.
 
 @import 'styles/_globals.scss';
-@import '../styles/features/footer';
+@import '../styles/common/footer';
 @import '../styles/common/_overlay-menu.scss';
+@import '../styles/common/_header.scss';
+@import '../styles/common/icon-detail';
 
-html {
-  overflow-x: hidden;
-}
 
 .main-container {
   background-color: $mainColor;
 }
 .main-view {
   min-height: $mainViewHeight;
-  width: 100vw;
+  width: 100%;
 }
