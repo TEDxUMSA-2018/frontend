@@ -6,23 +6,23 @@ import Participate from '../sections/participate/Participate';
 import Team from '../sections/team/Team';
 
 export const MENU_ROUTES = [{
-    text: 'About',
-    path: '/about',
-}, {
-    text: 'Home',
+    text: 'Inicio',
     path: '/'
 }, {
-    text: 'Speakers',
+    text: 'Acerca de',
+    path: '/about',
+}, {
+    text: 'Expositores',
     path: '/speakers'
 }, {
-    text: 'Sponsors',
+    text: 'Auspiciadores',
     path: '/sponsors'
 }, {
-    text: 'Participate',
-    path: '/participate'
-}, {
-    text: 'Team',
+    text: 'Equipo',
     path: '/team'
+}, {
+    text: 'Participar',
+    path: '/participate'
 }];
 
 export const COMPONENT_ROUTES = [{

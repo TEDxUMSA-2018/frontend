@@ -13,13 +13,26 @@ import Footer from './common/Footer';
 import Header from './common/Header'
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isMenuOpen: false
+    }
+  }
+
+  // HOOKS
+
   render() {
     return (
       <div>
         <div className="main-view">
           <Router>
             <div>
-              <Header />
+              <OverlayMenu
+                isOpen={this.state.isMenuOpen}
+                closeMenu={ this.closeMenu }
+              />
+              { this.getHeaderConfig() }
               { COMPONENT_ROUTES.map((item, index) =>
                 <Route
                   key={`route-${index}`}
@@ -36,10 +49,28 @@ class App extends React.Component {
     );
   }
 
-  toggleMenu = () => {
-    const { isMenuOpen } = this.state;
+  // DOM
+  getHeaderConfig = () => 
+    <header className="header">
+      <nav>
+          <i 
+            className="menu-icon fas fa-bars"
+            onClick={ this.openMenu }
+          />
+      </nav>
+    </header>
+
+  // EVENTS
+
+  openMenu = () => {
+    console.log("hi");
     this.setState({
-      isMenuOpen: !isMenuOpen
+      isMenuOpen: true
+    })
+  }
+  closeMenu = () => {
+    this.setState({
+      isMenuOpen: false
     })
   }
 }

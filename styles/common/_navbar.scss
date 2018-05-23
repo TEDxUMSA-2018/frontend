@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+}
+
+.menu-icon {
+  font-size: 6vh;
+  color: white;
+  margin: 20px 0 0 20px;
+}
+
+@media screen and (max-height: 450px) {
+	.menu-icon {
+		font-size: 10vh
+	}
+}

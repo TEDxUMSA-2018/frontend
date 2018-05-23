@@ -7,41 +7,29 @@ import {
 } from '../constants/Routes';
 
 export default class OverlayMenu extends React.Component{
-  state = {
-    isOpen: false
-  }
-
   render() {
-    const {isOpen} = this.state;
+    const {isOpen} = this.props;
     return (
-      isOpen
-        ? this._get_menu()
-        : this._get_open_btn()
+      isOpen 
+        ? this._get_menu() 
+        : null
     )
   }
-
-  _get_open_btn = () => 
-    <button
-      onClick={ this.openMenu }
-    >
-      Open Menu
-    </button>
 
   _get_menu = () => 
     <div
       className={`overlay`}
     >
-      <a 
-        className="closebtn" 
-        onClick={ this.closeMenu }
-      >
-        &times;
-      </a>
+      <i 
+        className="menu-icon fas fa-times" 
+        onClick={ this.props.closeMenu }
+      />
       <div className="overlay-content">
         <ul>
           { MENU_ROUTES.map( (item, index) =>
             <li
               key={`route-${index}`}
+              onClick={ this.props.closeMenu }
             >
               <Link
                 to={item.path}
@@ -53,16 +41,4 @@ export default class OverlayMenu extends React.Component{
         </ul>
       </div>
     </div>
-
-  openMenu = () => {
-    this.setState({
-      isOpen: true
-    })
-  }
-
-  closeMenu = () => {
-    this.setState({
-      isOpen: false
-    })
-  }
 }
