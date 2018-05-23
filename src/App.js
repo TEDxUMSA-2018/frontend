@@ -10,7 +10,6 @@ import {
 } from './constants/Routes';
 import OverlayNavbar from './common/OverlayNavbar'
 import Footer from './common/Footer';
-import Header from './common/Header'
 
 class App extends React.Component {
   constructor(props){
@@ -28,7 +27,7 @@ class App extends React.Component {
         <div className="main-view">
           <Router>
             <div>
-              <OverlayMenu
+              <OverlayNavbar
                 isOpen={this.state.isMenuOpen}
                 closeMenu={ this.closeMenu }
               />
