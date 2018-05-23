@@ -15,22 +15,19 @@
         width: 100%;
         text-align: center;
     }
-    li {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 30px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-    li:hover, .overlay li:focus {
-        color: #f1f1f1;
-    }
-    .closebtn {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
+    ul {
+        list-style-type: none;
+        li a{
+            padding: 8px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
     }
     .opened{
         width: 100%;
@@ -40,8 +37,8 @@
     }
 }
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
+  .overlay a {font-size: 10px}
+  .overlay {
     font-size: 40px;
     top: 15px;
     right: 35px;
