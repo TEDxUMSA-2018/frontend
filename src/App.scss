@@ -11,10 +11,11 @@
 
 // Sections
 @import '../styles/sections/home/_home.scss';
+@import '../styles/common/footer';
+@import '../styles/common/_overlay-menu.scss';
+@import '../styles/common/_header.scss';
+@import '../styles/common/icon-detail';
 
-html {
-  overflow-x: hidden;
-}
 
 body {
   font-family: 'Lato', sans-serif;
@@ -25,5 +26,5 @@ body {
 }
 .main-view {
   min-height: $mainViewHeight;
-  width: 100vw;
+  width: 100%;
 }

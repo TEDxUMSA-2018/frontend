@@ -8,8 +8,9 @@ import {
 import {
   COMPONENT_ROUTES
 } from './constants/Routes';
-import Footer from './sections/features/Footer';
-import OverlayMenu from './common/OverlayNavbar';
+import OverlayNavbar from './common/OverlayNavbar'
+import Footer from './common/Footer';
+import Header from './common/Header'
 
 class App extends React.Component {
   constructor(props){
