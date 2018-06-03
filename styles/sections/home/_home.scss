@@ -3,53 +3,54 @@
 		font-size: 16vh
 	}
 }
-
-.hero {
-	background: linear-gradient($gradient1, $gradient2), 
-				url("./images/bg_image.png") center center no-repeat;
-	background-size: cover;
-	color: white;
-	text-shadow: 1px 1px 2px black;
+.home-page {
+	.hero {
+		background: linear-gradient($gradient1, $gradient2), 
+					url("./images/bg_image.png") center center no-repeat;
+		background-size: cover;
+		color: white;
+		text-shadow: 1px 1px 2px black;
+		
+		.title {
+			color: $whiteColor;
+			font-size: 12vh;
+			font-weight: bold;
+			line-height: .9;
+			margin: 0;
+		}
 	
-	.title {
-		color: $whiteColor;
-		font-size: 12vh;
-		font-weight: bold;
-		line-height: .9;
-		margin: 0;
-	}
-
-	.hero-foot {
-		align-self: flex-end;
-		margin-bottom: 1em;
-
-		.countdown {
-			display: flex;
-			justify-content: space-between;
-			div {
-				align-items: flex-start;
-				height: 80px;
-				width: 80px;
-				margin-right: 20px;
-				background-color: $pinkColorTransp7;
+		.hero-foot {
+			align-self: flex-end;
+			margin-bottom: 1em;
+	
+			.countdown {
+				display: flex;
+				justify-content: space-between;
+				div {
+					align-items: flex-start;
+					height: 80px;
+					width: 80px;
+					margin-right: 20px;
+					background-color: $pinkColorTransp7;
+				}
 			}
 		}
-	}
-
-	.button {
-		border: .1em solid white;
-		color: white;
-		padding: .5em .67em;
-		text-decoration: none;
-	}
 	
-	.button-primary {
-		background-color: white;
-		color: black;
+		.button {
+			border: .1em solid white;
+			color: white;
+			padding: .5em .67em;
+			text-decoration: none;
+		}
+		
+		.button-primary {
+			background-color: white;
+			color: black;
+		}
 	}
+	article {
+		max-width: 36em;
+		margin: 0 auto;
+		padding: 1em;
+	}	
 }
-article {
-	max-width: 36em;
-	margin: 0 auto;
-	padding: 1em;
-}	

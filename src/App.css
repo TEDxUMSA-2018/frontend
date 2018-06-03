@@ -6532,46 +6532,75 @@ label.panel-block {
   cursor: pointer;
   align-self: flex-start; }
 
+.section-title.hero {
+  padding-top: 60px; }
+  .section-title.hero * {
+    color: #ffffff; }
+
+.section-title.pink {
+  background-color: #ff1b27; }
+
+.section-title.green {
+  background-color: #53e3d7; }
+
 @media screen and (max-height: 450px) {
   .hero-title {
     font-size: 16vh; } }
 
-.hero {
+.home-page .hero {
   background: linear-gradient(rgba(255, 27, 39, 0.3), rgba(83, 227, 215, 0.3)), url("./images/bg_image.png") center center no-repeat;
   background-size: cover;
   color: white;
   text-shadow: 1px 1px 2px black; }
-  .hero .title {
+  .home-page .hero .title {
     color: #ffffff;
     font-size: 12vh;
     font-weight: bold;
     line-height: .9;
     margin: 0; }
-  .hero .hero-foot {
+  .home-page .hero .hero-foot {
     align-self: flex-end;
     margin-bottom: 1em; }
-    .hero .hero-foot .countdown {
+    .home-page .hero .hero-foot .countdown {
       display: flex;
       justify-content: space-between; }
-      .hero .hero-foot .countdown div {
+      .home-page .hero .hero-foot .countdown div {
         align-items: flex-start;
         height: 80px;
         width: 80px;
         margin-right: 20px;
         background-color: rgba(255, 27, 39, 0.7); }
-  .hero .button {
+  .home-page .hero .button {
     border: .1em solid white;
     color: white;
     padding: .5em .67em;
     text-decoration: none; }
-  .hero .button-primary {
+  .home-page .hero .button-primary {
     background-color: white;
     color: black; }
 
-article {
+.home-page article {
   max-width: 36em;
   margin: 0 auto;
   padding: 1em; }
+
+.about-page .columns.is-gapless {
+  margin-bottom: 0 !important; }
+
+.about-page .columns .title {
+  background-color: #53e3d7;
+  color: #ffffff;
+  font-weight: 800; }
+
+.about-page .columns .description {
+  background-color: rgba(83, 227, 215, 0.3);
+  font-size: 12px !important; }
+
+.about-page .columns .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
 
 .footer-view {
   display: flex;
@@ -6710,7 +6739,8 @@ article {
   height: 100%; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  background-color: #f6f6f6 !important; }
 
 .main-container {
   background-color: #7f8c8d; }

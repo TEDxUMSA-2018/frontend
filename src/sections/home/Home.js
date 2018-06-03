@@ -2,10 +2,14 @@ import React from 'react';
 
 export default class Home extends React.Component{
     render(){
-        return ([
-            this._get_hero(),
-            this._get_content()
-        ])
+        return (
+            <div
+                className="home-page"
+            >
+                { this._get_hero() }
+                { this._get_content() }
+            </div>
+        )
     }
 
     // DOM
