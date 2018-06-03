@@ -1,6 +1,8 @@
 // Main scss file, used to import mixins, global variables, and stylesheets for each
 // component.
 
+@import 'bulma/bulma.sass';
+
 // Global variables
 @import 'styles/_globals.scss';
 

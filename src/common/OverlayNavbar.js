@@ -18,27 +18,28 @@ export default class OverlayMenu extends React.Component{
 
   _get_menu = () => 
     <div
-      className={`overlay`}
+      className='overlay'
     >
       <i 
         className="menu-icon fas fa-times" 
         onClick={ this.props.closeMenu }
       />
-      <div className="overlay-content">
-        <ul>
-          { MENU_ROUTES.map( (item, index) =>
-            <li
-              key={`route-${index}`}
-              onClick={ this.props.closeMenu }
+      <div
+        className='menu-items'
+      >
+        { MENU_ROUTES.map( (item, index) =>
+          <div
+            className='menu-item'
+            key={`route-${index}`}
+            onClick={ this.props.closeMenu }
+          >
+            <Link
+              to={item.path}
             >
-              <Link
-                to={item.path}
-              >
-                {item.text}
-              </Link>
-            </li>
-          ) }
-        </ul>
+              {item.text}
+            </Link>
+          </div>
+        ) }
       </div>
     </div>
 }

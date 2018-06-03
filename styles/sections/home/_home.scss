@@ -5,29 +5,35 @@
 }
 
 .hero {
-	align-items: center;
-	background: linear-gradient($gradient1, $gradient2, $gradient1), url("./images/bg_image.png") center center no-repeat;
+	background: linear-gradient($gradient1, $gradient2), 
+				url("./images/bg_image.png") center center no-repeat;
 	background-size: cover;
-	box-sizing: border-box;
 	color: white;
-	display: flex;
-	height: 100vh;
-	justify-content: space-between;
-	padding: 1em;
-	width: 100%;
 	text-shadow: 1px 1px 2px black;
 	
-	.hero-title {
+	.title {
+		color: $whiteColor;
 		font-size: 12vh;
 		font-weight: bold;
 		line-height: .9;
 		margin: 0;
 	}
 
-	.hero-footer {
+	.hero-foot {
 		align-self: flex-end;
-		display: flex;
 		margin-bottom: 1em;
+
+		.countdown {
+			display: flex;
+			justify-content: space-between;
+			div {
+				align-items: flex-start;
+				height: 80px;
+				width: 80px;
+				margin-right: 20px;
+				background-color: $pinkColorTransp7;
+			}
+		}
 	}
 
 	.button {

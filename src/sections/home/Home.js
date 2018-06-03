@@ -3,26 +3,40 @@ import React from 'react';
 export default class Home extends React.Component{
     render(){
         return ([
-            this._get_hero_image(),
+            this._get_hero(),
             this._get_content()
         ])
     }
 
     // DOM
+    _get_hero = () => 
+        <section key="hero-image" className="hero is-fullheight">
+            <div className="hero-body">
+                <div className="container">
+                    <h1 className="title">
+                        TEDxUMSA 2018
+                    </h1>
+                    <h4>
+                        15 de Septiembre, Paraninfo Universitario
+                    </h4>
+                </div>
+            </div>
+            <div className="hero-foot">
+                <div className="countdown">
+                    <div className="days">
 
-    _get_hero_image = () =>
-        <section 
-            className="hero"
-            key='home-hero'
-        >
-            <header className="hero-header">
-                <h1 className="hero-title">TEDxUMSA 2018</h1>
-                <h4>15 de Septiembre, Paraninfo Universitario</h4>
-            </header>
-            {/* <footer className="hero-footer">
-                <a className="button button-primary" href="#">Participar</a>
-                <a className="button" href="#">Recomendar expositor</a>
-            </footer> */}
+                    </div>
+                    <div className="hours">
+
+                    </div>
+                    <div className="mins">
+
+                    </div>
+                    <div className="secs">
+
+                    </div>
+                </div>
+            </div>
         </section>
 
     _get_content = () =>
