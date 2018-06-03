@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Countdown from '../../common/Countdown';
+
 export default class Home extends React.Component{
     render(){
         return (
@@ -27,6 +29,9 @@ export default class Home extends React.Component{
             </div>
             <div className="hero-foot">
                 <div className="countdown">
+                    <Countdown
+                        deadline={ new Date("Sep 15, 2018 08:00:00").getTime() }
+                    />
                     <div className="days">
 
                     </div>
