@@ -1,0 +1,15 @@
+.section-title {
+    &.hero{
+        padding-top: 60px;
+        * {
+            color: $whiteColor;
+        }
+    }
+
+    &.pink{
+        background-color: $pinkColor;
+    }
+    &.green{
+        background-color: $greenColor;
+    }
+}
