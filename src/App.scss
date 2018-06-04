@@ -20,9 +20,38 @@
 @import '../styles/common/_header.scss';
 @import '../styles/common/icon-detail';
 
+@font-face {
+  font-family: Baloo;
+  src: url(./resources/fonts/baloo_reg.ttf);
+}
+
+@font-face {
+  font-family: GillBold;
+  src: url(./resources/fonts/gill_sans_bold.otf);
+}
+
+@font-face {
+  font-family: GillBook;
+  src: url(./resources/fonts/gill_sans_book.otf);
+}
+
+@font-face {
+  font-family: GillExtraBold;
+  src: url(./resources/fonts/gill_sans_extra_bold.otf);
+}
+
+@font-face {
+  font-family: GillLight;
+  src: url(./resources/fonts/gill_sans_light.otf);
+}
+
+@font-face {
+  font-family: GillMedium;
+  src: url(./resources/fonts/gill_sans_medium.otf);
+}
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillLight', sans-serif;
   background-color: $mutedColor !important;
 }
 

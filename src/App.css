@@ -6548,7 +6548,7 @@ label.panel-block {
     font-size: 16vh; } }
 
 .home-page .hero {
-  background: linear-gradient(rgba(255, 27, 39, 0.3), rgba(83, 227, 215, 0.3)), url("./images/bg_image.png") center center no-repeat;
+  background: linear-gradient(rgba(255, 27, 39, 0.3), rgba(83, 227, 215, 0.3)), url("./resources/images/bg_image.png") center center no-repeat;
   background-size: cover;
   color: white;
   text-shadow: 1px 1px 2px black; }
@@ -6570,6 +6570,9 @@ label.panel-block {
         width: 80px;
         margin-right: 20px;
         background-color: rgba(255, 27, 39, 0.7); }
+  .home-page .hero .hero-subtitle {
+    font-family: Baloo;
+    font-size: 25px; }
   .home-page .hero .button {
     border: .1em solid white;
     color: white;
@@ -6583,6 +6586,9 @@ label.panel-block {
   max-width: 36em;
   margin: 0 auto;
   padding: 1em; }
+
+.home-page .test {
+  font-family: GillMedium; }
 
 .about-page .columns.is-gapless {
   margin-bottom: 0 !important; }
@@ -6738,8 +6744,32 @@ label.panel-block {
   align-items: center;
   height: 100%; }
 
+@font-face {
+  font-family: Baloo;
+  src: url(./resources/fonts/baloo_reg.ttf); }
+
+@font-face {
+  font-family: GillBold;
+  src: url(./resources/fonts/gill_sans_bold.otf); }
+
+@font-face {
+  font-family: GillBook;
+  src: url(./resources/fonts/gill_sans_book.otf); }
+
+@font-face {
+  font-family: GillExtraBold;
+  src: url(./resources/fonts/gill_sans_extra_bold.otf); }
+
+@font-face {
+  font-family: GillLight;
+  src: url(./resources/fonts/gill_sans_light.otf); }
+
+@font-face {
+  font-family: GillMedium;
+  src: url(./resources/fonts/gill_sans_medium.otf); }
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillLight', sans-serif;
   background-color: #f6f6f6 !important; }
 
 .main-container {

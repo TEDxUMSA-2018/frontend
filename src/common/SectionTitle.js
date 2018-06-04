@@ -6,7 +6,7 @@ const sectionTitle = props =>
         <div className="hero-body">
             <div className="container">
                 <h1 className="title">
-                    { props.title }
+                    { props.title.toUpperCase() }
                 </h1>
             </div>
         </div>

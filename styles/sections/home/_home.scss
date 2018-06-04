@@ -6,7 +6,7 @@
 .home-page {
 	.hero {
 		background: linear-gradient($gradient1, $gradient2), 
-					url("./images/bg_image.png") center center no-repeat;
+					url("./resources/images/bg_image.png") center center no-repeat;
 		background-size: cover;
 		color: white;
 		text-shadow: 1px 1px 2px black;
@@ -35,6 +35,11 @@
 				}
 			}
 		}
+
+		.hero-subtitle {
+			font-family: $balooFont;
+			font-size: 25px;
+		}
 	
 		.button {
 			border: .1em solid white;
@@ -52,5 +57,8 @@
 		max-width: 36em;
 		margin: 0 auto;
 		padding: 1em;
-	}	
+	}
+	.test{
+		font-family: $gillMediumFont;
+	}
 }

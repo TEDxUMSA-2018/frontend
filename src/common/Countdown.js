@@ -16,7 +16,9 @@ export default class Countdown extends React.Component{
         this.setState({
             currentTimestamp: new Date().getTime()
         });
-        this.calculateRemaining();
+        setInterval( () => {
+            this.calculateRemaining();
+        } )
     }
     
     render() {
@@ -35,20 +37,18 @@ export default class Countdown extends React.Component{
     }
 
     calculateRemaining = () => {
-        setInterval(() => {
-            let difference = this.props.deadline - this.state.currentTimestamp;
-    
-            let days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
-            this.setState({
-                remainingDays: days,
-                remainingHours: hours,
-                remainingMins: minutes,
-                remainingSecs: seconds
-            })
-        }, 1000);
+        let difference = this.props.deadline - this.state.currentTimestamp;
+
+        let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        this.setState({
+            remainingDays: days,
+            remainingHours: hours,
+            remainingMins: minutes,
+            remainingSecs: seconds
+        })
     }
 }
