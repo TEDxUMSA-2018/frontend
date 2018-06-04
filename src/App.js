@@ -62,7 +62,6 @@ class App extends React.Component {
   // EVENTS
 
   openMenu = () => {
-    console.log("hi");
     this.setState({
       isMenuOpen: true
     })

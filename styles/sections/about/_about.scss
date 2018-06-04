@@ -1,0 +1,22 @@
+.about-page {
+    .columns {
+        &.is-gapless {
+            margin-bottom: 0 !important;
+        }
+        .title{
+            background-color: $greenColor;
+            color: $whiteColor;
+            font-weight: 800;
+        }
+        .description{
+            background-color: $greenColorTransp3;
+            font-size: 12px !important;
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

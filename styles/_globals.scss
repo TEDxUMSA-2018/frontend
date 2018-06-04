@@ -1,13 +1,32 @@
 // Colors
 $mainColor: #7f8c8d;
 $altColor: #333;
+$mutedColor: #f6f6f6;
 $white: #fff;
 
+// TED Colors
+$redColor: #ff2b06;
+$blackColor: #000000;
+$whiteColor: #ffffff;
+
+// TEDxUMSA Colors
+$pinkColor: #ff1b27;
+$pinkColorTransp7: rgba(255, 27, 39, 0.7);
+$greenColor: #53e3d7;
+$greenColorTransp3: rgba(83, 227, 215, 0.3);
+$greenColorTransp7: rgba(83, 227, 215, 0.7);
+
 // Gradient colors
-$gradient1: rgba(19, 214, 214, 0.3);
-$gradient2: rgba(240, 93, 35, 0.3);
+$gradient1: rgba(255, 27, 39, 0.3);
+$gradient2: rgba(83, 227, 215, 0.3);
 
 // Font family
+$balooFont: Baloo;
+$gillBoldFont: GillBold;
+$gillBookFont: GillBook;
+$gillExtraBoldFont: GillExtraBold;
+$gillLightFont: GillLight;
+$gillMediumFont: GillMedium;
 
 // Sizes
 $mainViewHeight: 87vh;

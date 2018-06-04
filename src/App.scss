@@ -1,6 +1,8 @@
 // Main scss file, used to import mixins, global variables, and stylesheets for each
 // component.
 
+@import 'bulma/bulma.sass';
+
 // Global variables
 @import 'styles/_globals.scss';
 
@@ -8,17 +10,49 @@
 @import '../styles/common/_footer.scss';
 @import '../styles/common/_overlay-menu.scss';
 @import '../styles/common/_navbar.scss';
+@import '../styles/common/_section_title.scss';
 
 // Sections
 @import '../styles/sections/home/_home.scss';
+@import '../styles/sections/about/_about.scss';
 @import '../styles/common/footer';
 @import '../styles/common/_overlay-menu.scss';
 @import '../styles/common/_header.scss';
 @import '../styles/common/icon-detail';
 
+@font-face {
+  font-family: Baloo;
+  src: url(./resources/fonts/baloo_reg.ttf);
+}
+
+@font-face {
+  font-family: GillBold;
+  src: url(./resources/fonts/gill_sans_bold.otf);
+}
+
+@font-face {
+  font-family: GillBook;
+  src: url(./resources/fonts/gill_sans_book.otf);
+}
+
+@font-face {
+  font-family: GillExtraBold;
+  src: url(./resources/fonts/gill_sans_extra_bold.otf);
+}
+
+@font-face {
+  font-family: GillLight;
+  src: url(./resources/fonts/gill_sans_light.otf);
+}
+
+@font-face {
+  font-family: GillMedium;
+  src: url(./resources/fonts/gill_sans_medium.otf);
+}
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillLight', sans-serif;
+  background-color: $mutedColor !important;
 }
 
 .main-container {

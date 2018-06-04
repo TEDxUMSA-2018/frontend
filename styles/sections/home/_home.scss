@@ -3,47 +3,62 @@
 		font-size: 16vh
 	}
 }
-
-.hero {
-	align-items: center;
-	background: linear-gradient($gradient1, $gradient2, $gradient1), url("./images/bg_image.png") center center no-repeat;
-	background-size: cover;
-	box-sizing: border-box;
-	color: white;
-	display: flex;
-	height: 100vh;
-	justify-content: space-between;
-	padding: 1em;
-	width: 100%;
-	text-shadow: 1px 1px 2px black;
-	
-	.hero-title {
-		font-size: 12vh;
-		font-weight: bold;
-		line-height: .9;
-		margin: 0;
-	}
-
-	.hero-footer {
-		align-self: flex-end;
-		display: flex;
-		margin-bottom: 1em;
-	}
-
-	.button {
-		border: .1em solid white;
+.home-page {
+	.hero {
+		background: linear-gradient($gradient1, $gradient2), 
+					url("./resources/images/bg_image.png") center center no-repeat;
+		background-size: cover;
 		color: white;
-		padding: .5em .67em;
-		text-decoration: none;
-	}
+		text-shadow: 1px 1px 2px black;
+		
+		.title {
+			color: $whiteColor;
+			font-size: 12vh;
+			font-weight: bold;
+			line-height: .9;
+			margin: 0;
+		}
 	
-	.button-primary {
-		background-color: white;
-		color: black;
+		.hero-foot {
+			align-self: flex-end;
+			margin-bottom: 1em;
+	
+			.countdown {
+				display: flex;
+				justify-content: space-between;
+				div {
+					align-items: flex-start;
+					height: 80px;
+					width: 80px;
+					margin-right: 20px;
+					background-color: $pinkColorTransp7;
+				}
+			}
+		}
+
+		.hero-subtitle {
+			font-family: $balooFont;
+			font-size: 25px;
+		}
+	
+		.button {
+			border: .1em solid white;
+			color: white;
+			padding: .5em .67em;
+			text-decoration: none;
+		}
+		
+		.button-primary {
+			background-color: white;
+			color: black;
+		}
+	}
+	article {
+		max-width: 36em;
+		margin: 0 auto;
+		padding: 1em;
+	}
+	.test{
+		font-family: $gillMediumFont;
 	}
 }
-article {
-	max-width: 36em;
-	margin: 0 auto;
-	padding: 1em;
-}	
