@@ -4,12 +4,12 @@
 	}
 }
 .home-page {
-	.hero {
+	.tedxumsa-header {
 		background: linear-gradient($gradient1, $gradient2), 
 					url("./resources/images/bg_image.png") center center no-repeat;
 		background-size: cover;
-		color: white;
-		text-shadow: 1px 1px 2px black;
+		color: $whiteColor;
+		text-shadow: 1px 1px 2px $blackColor;
 		
 		.title {
 			color: $whiteColor;
@@ -22,18 +22,6 @@
 		.hero-foot {
 			align-self: flex-end;
 			margin-bottom: 1em;
-	
-			.countdown {
-				display: flex;
-				justify-content: space-between;
-				div {
-					align-items: flex-start;
-					height: 80px;
-					width: 80px;
-					margin-right: 20px;
-					background-color: $pinkColorTransp7;
-				}
-			}
 		}
 
 		.hero-subtitle {
@@ -42,14 +30,14 @@
 		}
 	
 		.button {
-			border: .1em solid white;
-			color: white;
+			border: .1em solid $whiteColor;
+			color: $whiteColor;
 			padding: .5em .67em;
 			text-decoration: none;
 		}
 		
 		.button-primary {
-			background-color: white;
+			background-color: $whiteColor;
 			color: black;
 		}
 	}
@@ -58,7 +46,17 @@
 		margin: 0 auto;
 		padding: 1em;
 	}
-	.test{
-		font-family: $gillMediumFont;
+	.more-details{
+		.column {
+			height: 80vh;
+		}
+
+		.details {
+			background-color: $pinkColor;
+			color: $whiteColor;
+			dl{
+				padding: 10px 30px;
+			}
+		}
 	}
 }
