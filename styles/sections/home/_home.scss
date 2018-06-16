@@ -54,6 +54,9 @@
 		.details {
 			background-color: $pinkColor;
 			color: $whiteColor;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			dl{
 				padding: 10px 30px;
 			}
