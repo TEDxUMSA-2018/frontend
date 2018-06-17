@@ -6594,27 +6594,38 @@ label.panel-block {
 
 .home-page .more-details .details {
   background-color: #ff1b27;
-  color: #ffffff; }
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .home-page .more-details .details dl {
     padding: 10px 30px; }
 
-.about-page .columns.is-gapless {
-  margin-bottom: 0 !important; }
+.about-page .hero-body.ted {
+  background: url("./resources/images/bitmap.png") right center no-repeat; }
 
-.about-page .columns .title {
-  background-color: #53e3d7;
-  color: #ffffff;
-  font-weight: 800; }
+.about-page .ted-image {
+  content: url("./resources/images/bitmap.png"); }
 
-.about-page .columns .description {
-  background-color: rgba(83, 227, 215, 0.3);
-  font-size: 12px !important; }
-
-.about-page .columns .column {
+.about-page .counter {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  align-items: center;
+  flex-wrap: wrap; }
+  .about-page .counter .counter-item {
+    margin: 1rem 2rem;
+    text-align: center; }
+    .about-page .counter .counter-item .counter-number {
+      display: block;
+      color: #463853;
+      font-weight: 500;
+      font-size: 3.375rem;
+      line-height: 1; }
+    .about-page .counter .counter-item .counter-label {
+      margin-top: 1rem;
+      display: block;
+      font-size: 1rem;
+      line-height: 1rem; }
 
 .footer-view {
   display: flex;
