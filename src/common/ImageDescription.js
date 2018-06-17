@@ -6,6 +6,7 @@ export default class ImageDescription extends React.Component{
     constructor(props) {
         super(props);
         IDContainer = styled.div`
+            overflow: hidden;
             position: relative;
             width: ${props.width};
             height: auto;
@@ -21,6 +22,9 @@ export default class ImageDescription extends React.Component{
                 <div className="blur" />
                 <div id="title">
                     {this.props.title}
+                </div>
+                <div id="text">
+                    {this.props.text}
                 </div>
             </IDContainer>
         )
