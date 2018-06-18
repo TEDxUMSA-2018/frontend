@@ -2,6 +2,7 @@ import React from 'react';
 
 import SectionTitle from '../../common/SectionTitle';
 import Description from './components/Description';
+import YouTubePlayer from '../../common/YouTubePlayer';
 
 const MAP = {
     ted: {
@@ -56,31 +57,9 @@ export default class About extends React.Component{
                     leftImage={true}
                 />                
                 { this._get_counter() }
-                <button 
-                    onClick={ this.openVideo }
-                >
-                    Ver video
-                </button>
-                <div className={`modal ${this.state.isModalOpen && 'is-active'}`}>
-                    <div 
-                        onClick={ this.closeVideo }
-                        className="modal-background" 
-                    />
-                    <div className="modal-content">
-                        <iframe 
-                            title="teaser" 
-                            width="560" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/7ldXMuwNC0I?rel=0" 
-                            frameBorder="0" allow="autoplay; encrypted-media" 
-                            allowFullScreen 
-                        />
-                    </div>
-                    <button 
-                        onClick={ this.closeVideo }
-                        className="modal-close is-large" 
-                        aria-label="close" />
-                </div>
+                <YouTubePlayer
+                    videoId="7ldXMuwNC0I"
+                />
             </React.Fragment>
         );
     }
@@ -104,15 +83,4 @@ export default class About extends React.Component{
             <div className="counter-number">{ number }</div>
             <div className="counter-label">{ label }</div>
         </div>
-
-    openVideo = () => {
-        this.setState({
-            isModalOpen: true
-        })
-    }
-    closeVideo = () => {
-        this.setState({
-            isModalOpen: false
-        })
-    }
 }
