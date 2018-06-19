@@ -1,16 +1,25 @@
 // Main scss file, used to import mixins, global variables, and stylesheets for each
 // component.
 
+
+// Global variables and bulma theming
 //@import 'bulma/bulma.sass';
 
 // Global variables
 @import 'styles/_globals.scss';
+
+@import 'bulma/bulma.sass';
 
 // Common components
 @import '../styles/common/_footer.scss';
 @import '../styles/common/_overlay-menu.scss';
 @import '../styles/common/_navbar.scss';
 @import '../styles/common/_section_title.scss';
+@import '../styles/common/_countdown.scss';
+
+// Sections
+@import '../styles/sections/home/_home.scss';
+@import '../styles/sections/about/_about.scss';
 @import '../styles/common/footer';
 @import '../styles/common/_overlay-menu.scss';
 @import '../styles/common/_header.scss';

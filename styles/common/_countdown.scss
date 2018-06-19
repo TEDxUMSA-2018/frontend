@@ -1,0 +1,14 @@
+.countdown {
+    background-color: $pinkColorTransp7;
+    align-items: center;
+    color: $whiteColor;
+
+    .card-footer{
+        border-top: none;
+    }
+    .card-footer-item{
+        text-align: center;
+        width: 70px;
+        font-weight: 700;
+    }
+}
