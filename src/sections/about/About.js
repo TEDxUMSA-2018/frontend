@@ -57,9 +57,7 @@ export default class About extends React.Component{
                     leftImage={true}
                 />                
                 { this._get_counter() }
-                <YouTubePlayer
-                    videoId="7ldXMuwNC0I"
-                />
+                { this._get_video() }
             </React.Fragment>
         );
     }
@@ -73,7 +71,7 @@ export default class About extends React.Component{
                     { this._get_counter_item("13", "expositores") }
                     { this._get_counter_item("100+", "asistentes") }
                     { this._get_counter_item("15+", "auspiciadores") }
-                    { this._get_counter_item("50M+", "fans en Facebook") }
+                    { this._get_counter_item("4K+", "fans en Facebook") }
                 </div>
             </div>
         </div>
@@ -82,5 +80,18 @@ export default class About extends React.Component{
         <div className="counter-item">
             <div className="counter-number">{ number }</div>
             <div className="counter-label">{ label }</div>
+        </div>
+
+    _get_video = () => 
+        <div className="container">
+            <div className="columns">
+                <div className="column is-4" />
+                <div className="column">
+                    <YouTubePlayer
+                        videoId="7ldXMuwNC0I"
+                    />
+                </div>
+                <div className="column is-4" />
+            </div>
         </div>
 }

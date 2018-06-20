@@ -32,23 +32,21 @@ class YouTubePlayer extends React.Component {
         };
     }
 
+    
     render() {
+        const url = "https://img.youtube.com/vi/" + this.props.videoId + "/maxresdefault.jpg";
         return (
             <React.Fragment>
-                <figure className="image is-3by2">
+                <figure className="video image is-256x256">
                     <img 
                         alt="vid"
                         onClick={ this.openVideo }
-                        className="play-button"
+                        className="vid-thumbnail play-button"
                         src={`https://img.youtube.com/vi/${this.props.videoId}/maxresdefault.jpg`} 
                     />
+                    <a href="#"/>
                 </figure>
-                <button 
-                    onClick={ this.openVideo }
-                    id="play-button"
-                >
-                    Ver video
-                </button>
+                
                 <div className={`modal ${this.state.isModalOpen && 'is-active'}`}>
                     <div 
                         onClick={ this.closeVideo }
