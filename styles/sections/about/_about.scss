@@ -1,22 +1,35 @@
 .about-page {
-    .columns {
-        &.is-gapless {
-            margin-bottom: 0 !important;
+    .hero-body{
+        &.ted{
+            background: url("./resources/images/bitmap.png") right center no-repeat;
         }
-        .title{
-            background-color: $greenColor;
-            color: $whiteColor;
-            font-weight: 800;
-        }
-        .description{
-            background-color: $greenColorTransp3;
-            font-size: 12px !important;
-        }
-        .column{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+    }
+    .ted-image{
+        content: url("./resources/images/bitmap.png");
+    }
+
+    .counter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .counter-item{
+            margin: 1rem 2rem;
             text-align: center;
+            .counter-number{
+                display: block;
+                color: #463853;
+                font-weight: 500;
+                font-size: 3.375rem;
+                line-height: 1;
+            }
+            .counter-label{
+                margin-top: 1rem;
+                display: block;
+                font-size: 1rem;
+                line-height: 1rem;
+            }
         }
+
     }
 }
