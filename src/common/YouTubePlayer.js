@@ -44,7 +44,7 @@ class YouTubePlayer extends React.Component {
                         className="vid-thumbnail play-button"
                         src={`https://img.youtube.com/vi/${this.props.videoId}/maxresdefault.jpg`} 
                     />
-                    <a href="#"/>
+                    <div />
                 </figure>
                 
                 <div className={`modal ${this.state.isModalOpen && 'is-active'}`}>
