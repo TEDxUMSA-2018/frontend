@@ -63,7 +63,7 @@ export default class About extends React.Component{
     }
 
     _get_counter = () =>
-        <div className="container">
+        <div className="container is-fullhd">
             <div className="section-header has-text-centered">
                 <h2 className="title is-1 is-spaced">{ MAP.tedxumsa17.title }</h2>
                 <h3 className="subtitle is-5">{ MAP.tedxumsa17.description }</h3>
@@ -83,12 +83,13 @@ export default class About extends React.Component{
         </div>
 
     _get_video = () => 
-        <div className="container">
+        <div className="container is-fullhd">
             <div className="columns">
                 <div className="column is-4" />
                 <div className="column">
                     <YouTubePlayer
                         videoId="7ldXMuwNC0I"
+                        videoDescription="Resumen TEDxUMSA 2017"
                     />
                 </div>
                 <div className="column is-4" />
