@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 class YouTubePlayer extends React.Component {
     static proptypes = {
-        videoId: PropTypes.string.isRequired
+        videoId: PropTypes.string.isRequired,
+        videoDescription: PropTypes.isRequired
     }
 
     constructor(props) {
@@ -11,7 +12,8 @@ class YouTubePlayer extends React.Component {
         this.init();
         this.video = props.videoId;
         this.state = {
-            isModalOpen: false
+            isModalOpen: false,
+            thumbnailUrl: ''
         }
     
         window['onYouTubeIframeAPIReady'] = e => {
@@ -31,34 +33,51 @@ class YouTubePlayer extends React.Component {
             });
         };
     }
-
     
     render() {
-        const url = "https://img.youtube.com/vi/" + this.props.videoId + "/maxresdefault.jpg";
         return (
             <React.Fragment>
-                <figure className="video image is-256x256">
-                    <img 
-                        alt="vid"
-                        onClick={ this.openVideo }
-                        className="vid-thumbnail play-button"
-                        src={`https://img.youtube.com/vi/${this.props.videoId}/maxresdefault.jpg`} 
-                    />
-                    <a href="#"/>
-                </figure>
-                
-                <div className={`modal ${this.state.isModalOpen && 'is-active'}`}>
-                    <div 
-                        onClick={ this.closeVideo }
-                        className="modal-background stop-button"
-                    />
-                    <div className="modal-content" id="playerContainer" />
-                    <button 
-                        onClick={ this.closeVideo }
-                        className="modal-close is-large stop-button" 
-                        aria-label="close" />
-                </div>
+                { this._get_video_thumbnail() }
+                { this._get_video_modal() }
             </React.Fragment>
+        );
+    }
+
+    _get_video_thumbnail = () => {
+        const {
+            videoId,
+            videoDescription
+        } = this.props;
+        return (
+            <figure className="video image is-256x256">
+                <img 
+                    alt="vid"
+                    className="vid-thumbnail"
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+                />
+                <div onClick={ this.openVideo } className="play-button"/>
+                <div className="video-description">
+                    <h2>{ videoDescription }</h2>
+                </div>
+            </figure>
+        )
+    }
+
+    _get_video_modal = () => {
+        const { isModalOpen } = this.state;
+        const modalCls = isModalOpen ? 'is-active' : ''
+        return (
+            <div className={`modal ${modalCls}`}>
+                <div 
+                    onClick={ this.closeVideo }
+                    className="modal-background stop-button"
+                />
+                <div className="modal-content" id="playerContainer" />
+                <button 
+                    onClick={ this.closeVideo }
+                    className="modal-close is-large stop-button" 
+                    aria-label="close" />
+            </div>
         );
     }
 

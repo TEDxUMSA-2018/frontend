@@ -4,6 +4,19 @@
             background: url("./resources/images/bitmap.png") right center no-repeat;
         }
     }
+    .section{
+        .title{
+            font-family: $balooFont;
+        }
+        .subtitle{
+            font-size: 1rem;
+        }
+    }
+    .section-header{
+        .title{
+            font-family: $balooFont;
+        }
+    }
     .ted-image{
         content: url("./resources/images/bitmap.png");
     }
@@ -13,6 +26,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        background-color: $greenColor;
+        margin-bottom: 15px;
         .counter-item{
             margin: 1rem 2rem;
             text-align: center;
