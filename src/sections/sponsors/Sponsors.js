@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SectionTitle from '../../common/SectionTitle';
+import { SectionTitle } from '../../common';
 
 export default class Sponsors extends React.Component{
     render(){

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { animate } from './Animation';
 
 
-export default class IconDetail extends React.Component{
+class IconDetail extends React.Component{
     constructor(props) {
         super(props);
         const textWidth = (props.displayText === undefined || props.displayText )?100:0;
@@ -64,3 +64,5 @@ export default class IconDetail extends React.Component{
         return false;
     }
 }
+
+export { IconDetail }

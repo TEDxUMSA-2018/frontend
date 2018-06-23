@@ -1,7 +1,9 @@
 import React from 'react';
 
-import SectionTitle from '../../common/SectionTitle';
-import ImageDescription from '../../common/ImageDescription'
+import {
+    SectionTitle,
+    ImageDescription
+} from '../../common';
 
 export default class Speakers extends React.Component{
     tedxUrl = "https://tedxumsa.org/images/speakers";

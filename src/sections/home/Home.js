@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Countdown from '../../common/Countdown';
+import { Countdown } from '../../common';
 
 export default class Home extends React.Component{
     constructor(props){

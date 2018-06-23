@@ -59,4 +59,4 @@ class Description extends React.Component{
     }
 }
 
-export default Description;
+export { Description };

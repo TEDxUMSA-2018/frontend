@@ -1,6 +1,6 @@
 import React from 'react';
 
-const sectionTitle = props => 
+const SectionTitle = props => 
     <section 
         className={`section-title hero ${props.background}`}>
         <div className="hero-body">
@@ -12,4 +12,4 @@ const sectionTitle = props =>
         </div>
     </section>
 
-export default sectionTitle;
+export { SectionTitle };

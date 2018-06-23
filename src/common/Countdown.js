@@ -2,7 +2,7 @@ import React from 'react';
 
 const MILLISECONDS = 1000;
 
-export default class Countdown extends React.Component{
+class Countdown extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -84,3 +84,5 @@ export default class Countdown extends React.Component{
     addLeadingZero = num => 
         num < 10 ? `0${num}` : num;
 }
+
+export { Countdown }

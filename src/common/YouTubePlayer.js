@@ -161,4 +161,4 @@ class YouTubePlayer extends React.Component {
     }
 }
 
-export default YouTubePlayer;
+export {YouTubePlayer};

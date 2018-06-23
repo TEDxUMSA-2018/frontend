@@ -8,8 +8,10 @@ import {
 import {
   COMPONENT_ROUTES
 } from './constants/Routes';
-import OverlayNavbar from './common/OverlayNavbar'
-import Footer from './common/Footer';
+import {
+  OverlayNavbar,
+  Footer
+} from './common';
 
 class App extends React.Component {
   constructor(props){

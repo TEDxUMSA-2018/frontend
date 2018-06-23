@@ -1,10 +1,10 @@
 import React from 'react';
 
-import OverlayNavbar from './OverlayNavbar';
-import IconDetail from './IconDetail';
+import { OverlayNavbar } from './OverlayNavbar';
+import { IconDetail } from './index';
 import { animate } from './Animation';
 
-export default class Header extends React.Component{
+class Header extends React.Component{
     openAnimationTime = 400;
     baseHeight = 60;
     contentHeight = 240;
@@ -86,3 +86,5 @@ export default class Header extends React.Component{
         this.setState({eventOpen: !this.state.eventOpen});
     }
 }
+
+export { Header }

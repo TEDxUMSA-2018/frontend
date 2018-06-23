@@ -1,8 +1,10 @@
 import React from 'react';
 
-import SectionTitle from '../../common/SectionTitle';
-import Description from './components/Description';
-import YouTubePlayer from '../../common/YouTubePlayer';
+import { 
+    SectionTitle,
+    Description,
+    YouTubePlayer
+} from '../../common';
 
 const MAP = {
     ted: {

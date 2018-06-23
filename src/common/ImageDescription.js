@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 let IDContainer;
-export default class ImageDescription extends React.Component{
+class ImageDescription extends React.Component{
     constructor(props) {
         super(props);
         IDContainer = styled.div`
@@ -30,3 +30,5 @@ export default class ImageDescription extends React.Component{
         )
     }
 }
+
+export { ImageDescription }
