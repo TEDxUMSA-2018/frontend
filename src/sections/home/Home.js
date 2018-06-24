@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Countdown } from '../../common';
+import { 
+    Countdown,
+    SectionSubtitle
+} from '../../common';
+import { ParticipateCard } from './components/ParticipateCard';
 
 export default class Home extends React.Component{
     constructor(props){
@@ -64,25 +68,41 @@ export default class Home extends React.Component{
 
     _get_content = () =>
         <React.Fragment>
-            { this._get_content_header() }
+            <SectionSubtitle 
+                title="Más detalles"
+            />
             <div className="container is-fullhd">
                 <div className="columns more-details">
                     { this._get_map() }
                     { this._get_details_card() }
                 </div>
             </div>
-        </React.Fragment>
-
-    _get_content_header = () => 
-        <section className="hero is-primary">
-            <div className="hero-body">
+            <SectionSubtitle 
+                title="¿Cómo participar?"
+            />
+            <section className="section is-usp has-background is-medium">
                 <div className="container">
-                    <h1 className="title">
-                        Más detalles
-                    </h1>
+                    <div className="columns">
+                        <ParticipateCard
+                            imageUrl=""
+                            assetUrl="https://goo.gl/forms/iTgKszIrmx7o6C3j2"
+                            title="Recomienda un expositor"
+                            content="¿Eres o conoces a alguien que podría dar una charla en TEDxUMSA 2018?. Llena este formulario!."
+                        />
+                        <ParticipateCard
+                            imageUrl=""
+                            title="Sé un auspiciador"
+                            content="¿Quieres ayudar a que se lleve a cabo nuestro evento?. Aqui encontrarás mas información."
+                        />
+                        <ParticipateCard
+                            imageUrl=""
+                            title="Asiste al TEDxUMSA 2018"
+                            content="Inscríbete para ser uno de los asistentes de nuestro evento y vivir la experiencia TEDxUMSA."
+                        />                       
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </React.Fragment>
 
     _get_map = () => 
         <div 

@@ -5,5 +5,6 @@ export * from './Header';
 export * from './IconDetail';
 export * from './ImageDescription';
 export * from './OverlayNavbar';
+export * from './SectionSubtitle';
 export * from './SectionTitle';
 export * from './YouTubePlayer';
