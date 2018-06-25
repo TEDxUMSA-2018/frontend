@@ -10,38 +10,35 @@ export const MENU_ROUTES = [{
     path: '/'
 }, {
     text: 'Acerca de',
-    path: '/about',
+    path: '/acerca-de',
 }, {
     text: 'Expositores',
-    path: '/speakers'
+    path: '/expositores'
 }, {
     text: 'Auspiciadores',
-    path: '/sponsors'
+    path: '/auspiciadores'
 }, {
     text: 'Equipo',
-    path: '/team'
+    path: '/equipo'
 }, {
-    text: 'Participar',
-    path: '/participate'
+    text: 'Blog',
+    path: '/blog'
 }];
 
 export const COMPONENT_ROUTES = [{
     component: About,
-    path: '/about',
+    path: '/acerca-de',
 }, {
     component: Home,
     path: '/',
     exact: true
 }, {
     component: Speakers,
-    path: '/speakers'
+    path: '/expositores'
 }, {
     component: Sponsors,
-    path: '/sponsors'
-}, {
-    component: Participate,
-    path: '/participate'
+    path: '/auspiciadores'
 }, {
     component: Team,
-    path: '/team'
+    path: '/equipo'
 }];

@@ -7,4 +7,5 @@ export * from './ImageDescription';
 export * from './OverlayNavbar';
 export * from './SectionSubtitle';
 export * from './SectionTitle';
+export * from './Tabs';
 export * from './YouTubePlayer';
