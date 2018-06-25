@@ -1,0 +1,37 @@
+.custom-tabs {
+    transition: opacity 0.5s linear 0s, visibility 0.5 linear 0s;
+    ul.tabs-nav li.is-active a {
+        background: #f1f1f1;
+        text-decoration: none;
+    }
+    
+    .tab-content {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .tab-content.is-active {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .is-active {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .menu-list {
+        .desktop-tab {
+            transition: background-color 0.5s linear 0s;
+            :hover {
+                background-color: $greenColorTransp3;
+            }      
+            &.is-active{
+                background-color: $greenColor;
+            }
+        }
+    }
+}
