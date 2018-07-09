@@ -2,7 +2,8 @@ import About from '../sections/about/About';
 import Home from '../sections/home/Home';
 import Speakers from '../sections/speakers/Speakers';
 import Sponsors from '../sections/sponsors/Sponsors';
-import Participate from '../sections/participate/Participate';
+import Blog from '../sections/blog/Blog';
+import BlogAdmin from '../sections/blog/admin/BlogAdmin';
 import Team from '../sections/team/Team';
 
 export const MENU_ROUTES = [{
@@ -41,4 +42,10 @@ export const COMPONENT_ROUTES = [{
 }, {
     component: Team,
     path: '/equipo'
+}, {
+    component: Blog,
+    path: '/blog'
+}, {
+    component: BlogAdmin,
+    path: '/gestor-blog'
 }];
