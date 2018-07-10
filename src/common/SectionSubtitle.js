@@ -1,12 +1,12 @@
 import React from 'react';
 
-const SectionSubtitle = props => {
+const SectionSubtitle = ({title}) => {
     return (
-        <section className="hero is-primary">
+        <section className="section-subtitle hero is-primary">
             <div className="hero-body">
                 <div className="container">
                     <h1 className="title">
-                        { props.title }
+                        { title }
                     </h1>
                 </div>
             </div>
