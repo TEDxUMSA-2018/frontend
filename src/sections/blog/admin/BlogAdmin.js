@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
+import moment from 'moment';
 import 'react-quill/dist/quill.snow.css';
 import BlogPost from '../BlogPost';
 
 import {SectionTitle} from '../../../common';
 import {database} from '../../../firebase';
 
+moment.locale('es');
 class BlogAdmin extends React.Component {
     constructor(props){
         super(props);
@@ -14,6 +16,7 @@ class BlogAdmin extends React.Component {
 
             title: '',
             body: '',
+            published: true,
             posts: {}
         }
 
@@ -24,7 +27,7 @@ class BlogAdmin extends React.Component {
     componentDidMount(){
         database.on('value', snapshot => {
             this.setState({
-                posts: snapshot.val()
+                posts: snapshot.val() ? snapshot.val() : []
             })
         });
     }
@@ -73,40 +76,42 @@ class BlogAdmin extends React.Component {
         </div>
     );
 
-    _get_list = () => (
-        <table className="table" style={{ width: '100%' }}>
-            <thead>
-                <tr>
-                    <th>Título</th>
-                    <th>Fecha</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {Object.keys(this.state.posts).map((post, index) => {
-                    const currentPost = this.state.posts[post];
-                    return (
-                        <tr>
-                            <td>{currentPost.title}</td>
-                            <td>{currentPost.publishedDate || '-'}</td>
-                            <td>{currentPost.publised ? 'Publicado' : 'Borrador'}</td>
-                            <td>
-                                <div className="buttons has-addons">
-                                    <a className="button is-small">
-                                        <span className="icon is-small"><i className="fas fa-edit"></i></span>
-                                    </a>
-                                    <a className="button is-small">
-                                        <span className="icon is-small"><i className="fas fa-trash"></i></span>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    );
-                } )}   
-            </tbody>
-        </table>
-    );
+    _get_list = () => {
+        return (
+            <table className="table" style={{ width: '100%' }}>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Object.keys(this.state.posts).map((post, index) => {
+                        const currentPost = this.state.posts[post];
+                        return (
+                            <tr key={`post-${index}`}>
+                                <td>{currentPost.title}</td>
+                                <td>{currentPost.publishedDate ? moment(currentPost.publishedDate).format("DD MMM YYYY, HH:MM") : '-'}</td>
+                                <td>{currentPost.published ? 'Publicado' : 'Borrador'}</td>
+                                <td>
+                                    <div className="buttons has-addons">
+                                        <a className="button is-small" onClick={() => this.onEditPost(currentPost)}>
+                                            <span className="icon is-small"><i className="fas fa-edit"></i></span>
+                                        </a>
+                                        <a className="button is-small">
+                                            <span className="icon is-small"><i className="fas fa-trash"></i></span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        );
+                    } )}   
+                </tbody>
+            </table>
+        );
+    };
 
     _get_form = () => (
         <React.Fragment>
@@ -132,9 +137,9 @@ class BlogAdmin extends React.Component {
                 <label className="label">Publicar</label>
                 <div className="control">
                     <div className="select">
-                    <select>
-                        <option>Publicar post</option>
-                        <option>Guardar borrador</option>
+                    <select name="published" onChange={this.onPublishedChanged}>
+                        <option value='published'>Publicar post</option>
+                        <option value='draft'>Guardar borrador</option>
                     </select>
                     </div>
                 </div>
@@ -178,6 +183,12 @@ class BlogAdmin extends React.Component {
         });
     }
 
+    onPublishedChanged = event => {
+        this.setState({
+            published: event.target.value === 'published'
+        });
+    }
+
     onChangeSelectedSection = sectionSelected => {
         const { currentSection } = this.state;
         if(currentSection !== sectionSelected) {
@@ -187,16 +198,26 @@ class BlogAdmin extends React.Component {
         }
     }
 
+    onEditPost = post => {
+        this.setState({
+            
+        });
+    }
+
     handleSubmit = e => {
         e.preventDefault();
+        console.log("state", this.state);
         const post = {
             title: this.state.title,
-            body: this.state.body
+            body: this.state.body,
+            published: this.state.published,
+            publishedDate: this.state.published ? moment().format() : null
         }
         database.push(post);
         this.setState({
             title: '',
-            body: ''
+            body: '',
+            published: true
         });
     }
 }
