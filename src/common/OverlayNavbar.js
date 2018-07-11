@@ -14,7 +14,7 @@ class OverlayNavbar extends React.Component{
         const { burgerMenuOpen } = this.state;
         return (
             <div className="td-navbar">
-                 <nav id="navbar" className="navbar has-shadow is-spaced is-fixed-top is-transparent">
+                 <nav id="navbar" className="navbar has-shadow is-spaced is-transparent">
                     <div className="container">
                         { this.renderBrand() }
                         <div 

@@ -1,65 +1,185 @@
-@media screen and (max-height: 450px) {
-	.hero-title {
-		font-size: 16vh
+@media screen and (max-width: 768px) {
+	.home-page {
+		.first-row {
+			height: 100vh !important;
+			.first-col {
+				height: 100vh;
+			}
+			.second-col{
+				h1 {
+					font-size: 30vw !important;
+					margin-bottom: 1rem;
+					.small{
+						font-size: 15vw !important;
+					}
+				}
+				h2 {
+					font-size: 12vw !important;
+				}
+				.content-text {
+					padding: 2vw 8vw !important;
+					color: $whiteColor;
+					font-size: 5vw !important;
+				}
+			}
+		}
+		.second-row {
+			height: 100vh !important;
+			.first-col {
+				h1 {
+					font-size: 15vw!important;
+					margin-bottom: 0;
+				}
+				.content-text {
+					padding: 2vw 6vw;
+					color: $blackColor;
+					font-size: 7vw !important;
+				}
+				.image {
+					width: 90vw !important;
+				}
+			}
+			.second-col{
+				h1 {
+					font-size: 15vw !important;
+					margin-bottom: 1rem;
+					.small{
+						font-size: 15vw !important;
+					}
+				}
+				.content-text {
+					padding: 2vw 8vw !important;
+					font-size: 5vw !important;
+				}
+			}
+		}
 	}
 }
 .home-page {
-	.tedxumsa-header {
-		background: linear-gradient($gradient1, $gradient2), 
-					url("./resources/images/bg_image.png") center center no-repeat;
-		background-size: cover;
-		color: $whiteColor;
-		text-shadow: 1px 1px 2px $blackColor;
-		
+	margin-top: 70px;
+	.hero-image {
+		height: 100vh;
+	}
+	.container-desktop {
 		.title {
-			color: $whiteColor;
-			font-size: 12vh;
-			font-weight: bold;
-			line-height: .9;
-			margin: 0;
+			margin-bottom: 1rem;
 		}
-	
-		.hero-foot {
-			align-self: flex-end;
-			margin-bottom: 1em;
-		}
-
-		.hero-subtitle {
+		.day-number {
+			font-size: 15vw;
 			font-family: $balooFont;
-			font-size: 25px;
+			color: $pinkColor;
 		}
-	
-		.button {
-			border: .1em solid $whiteColor;
-			color: $whiteColor;
-			padding: .5em .67em;
-			text-decoration: none;
+		.days {
+			font-size: 7vw;
+			font-family: $balooFont;
+			color: $pinkColor;
 		}
-		
-		.button-primary {
-			background-color: $whiteColor;
-			color: black;
+		.name {
+			font-size: 7vw;
+			font-family: $balooFont;
+			color: $blackColor
+		}
+		.year {
+			font-size: 7vw;
+			font-family: $balooFont;
+			color: $blackColor;
 		}
 	}
-	article {
-		max-width: 36em;
-		margin: 0 auto;
-		padding: 1em;
-	}
-	.more-details{
-		.column {
-			height: 80vh;
+	.container-mobile{
+		.title{
+			font-family: $balooFont;
+			color: $blackColor
 		}
-
-		.details {
-			background-color: $pinkColor;
-			color: $whiteColor;
+		.subtitle {
+			font-family: $balooFont;
+			color: $pinkColor
+		}
+	}
+	.first-row {
+		height: 100vh !important;
+		.first-col {
+			height: 100vh;
+		}
+		.second-col{
+			background-color: $blackColor;
+			height: 100vh;
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			dl{
-				padding: 10px 30px;
+			align-items: center;
+			h1, h2 {
+				color: $whiteColor;
+				font-family: $balooFont;
 			}
+			h1 {
+				font-size: 8vw;
+				margin-bottom: 0;
+				.small{
+					font-size: 4vw;
+				}
+			}
+			h2 {
+				font-size: 8vw;
+			}
+			.content-text {
+				padding: 2vw 6vw;
+				color: $whiteColor;
+				font-size: 2vw;
+			}
+		}
+	}
+	.second-row {
+		height: 100vh !important;
+		.first-col {
+			background-color: $whiteColor;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			h1, h2 {
+				color: $blackColor;
+				font-family: $balooFont;
+			}
+			h1 {
+				font-size: 5vw;
+				margin-bottom: 0;
+				.small{
+					font-size: 4vw;
+				}
+			}
+			h2 {
+				font-size: 8vw;
+			}
+			.content-text {
+				padding: 2vw 6vw;
+				color: $blackColor;
+				font-size: 2vw;
+			}
+		}
+		.second-col{
+			background-color: $greenColor;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			h1, h2 {
+				color: $blackColor;
+				font-family: $balooFont;
+			}
+			h1 {
+				font-size: 5vw;
+				margin-bottom: 0;
+				.small{
+					font-size: 4vw;
+				}
+			}
+			.content-text {
+				padding: 2vw 6vw;
+				color: $blackColor;
+				font-size: 2vw;
+			}
+		}
+	}
+	.where {
+		h1{
+			font-family: $balooFont;
+			font-size: 6vw;
 		}
 	}
 }
