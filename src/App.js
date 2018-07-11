@@ -29,11 +29,7 @@ class App extends React.Component {
         <div className="main-view">
           <Router>
             <div>
-              <OverlayNavbar
-                isOpen={this.state.isMenuOpen}
-                closeMenu={ this.closeMenu }
-              />
-              { this.getHeaderConfig() }
+              <OverlayNavbar />
               { COMPONENT_ROUTES.map((item, index) =>
                 <Route
                   key={`route-${index}`}
@@ -49,17 +45,6 @@ class App extends React.Component {
       </div>
     );
   }
-
-  // DOM
-  getHeaderConfig = () => 
-    <header className="header">
-      <nav>
-          <i 
-            className="menu-icon fas fa-bars"
-            onClick={ this.openMenu }
-          />
-      </nav>
-    </header>
 
   // EVENTS
 
