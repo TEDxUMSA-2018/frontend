@@ -8,37 +8,50 @@ import Team from '../sections/team/Team';
 export const MENU_ROUTES = [{
     text: 'Inicio',
     path: '/'
-}, {
-    text: 'Acerca de',
-    path: '/acerca-de',
-}, {
-    text: 'Expositores',
-    path: '/expositores'
+},{
+    text: 'Equipo',
+    path: '/equipo'
 }, {
     text: 'Auspiciadores',
     path: '/auspiciadores'
 }, {
-    text: 'Equipo',
-    path: '/equipo'
+    text: 'Expositores',
+    path: '/expositores'
 }, {
-    text: 'Blog',
-    path: '/blog'
-}];
+    text: 'Areas de Trabajo',
+    path: '/areas'
+}, {
+    text: 'Participar',
+    path: '/participar'
+}, 
+// {
+//     text: 'Auspiciar',
+//     path: '/auspiciar'
+// }
+];
 
 export const COMPONENT_ROUTES = [{
-    component: About,
-    path: '/acerca-de',
-}, {
     component: Home,
     path: '/',
     exact: true
 }, {
-    component: Speakers,
-    path: '/expositores'
+    component: Team,
+    path: '/equipo'
 }, {
     component: Sponsors,
     path: '/auspiciadores'
 }, {
-    component: Team,
-    path: '/equipo'
-}];
+    component: Speakers,
+    path: '/expositores'
+}, {
+    component: About,
+    path: '/areas'
+}, {
+    component: Participate,
+    path: '/participar'
+}, 
+// {
+//     component: About,
+//     path: '/auspiciar'
+// }
+];
