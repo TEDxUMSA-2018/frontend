@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SectionTitle, Description, SectionSubtitle } from '../../common';
+import { SectionTitle, Description } from '../../common';
 import MemberCard from './components/MemberCard';
 
 const TEAM = [{

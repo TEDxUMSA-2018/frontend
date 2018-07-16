@@ -3,9 +3,10 @@ import ReactQuill from 'react-quill';
 import moment from 'moment';
 import 'react-quill/dist/quill.snow.css';
 import BlogPost from '../BlogPost';
+import { authentication } from './DummyProtected';
 
 import {SectionTitle} from '../../../common';
-import {database} from '../../../firebase';
+import {auth, database} from '../../../firebase';
 
 moment.locale('es');
 class BlogAdmin extends React.Component {
@@ -31,14 +32,21 @@ class BlogAdmin extends React.Component {
             })
         });
     }
+    handleSignOut = () => {
+        auth.signOut();
+    };
     render() {
         const {currentSection} = this.state;
         return (
             <React.Fragment>
-                <SectionTitle 
+                <SectionTitle
                     title="Blog Admin"
                     background="pink"
                 />
+                <div className="container">
+                    <h4>klaatu barada nikto</h4>
+                    <button onClick={this.handleSignOut}>Cerrar Sesión</button>
+                </div>
                 <div className="container">
                     <div className="columns">
                         { this._get_sidebar() }
@@ -196,13 +204,13 @@ class BlogAdmin extends React.Component {
                 currentSection: sectionSelected
             });
         }
-    }
+    };
 
     onEditPost = post => {
         this.setState({
             
         });
-    }
+    };
 
     handleSubmit = e => {
         e.preventDefault();
@@ -255,4 +263,4 @@ BlogAdmin.formats = [
     'clean'
 ];
 
-export default BlogAdmin;
+export default authentication(BlogAdmin);

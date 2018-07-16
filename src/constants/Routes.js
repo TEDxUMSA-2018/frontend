@@ -4,6 +4,8 @@ import Speakers from '../sections/speakers/Speakers';
 import Sponsors from '../sections/sponsors/Sponsors';
 import Blog from '../sections/blog/Blog';
 import BlogAdmin from '../sections/blog/admin/BlogAdmin';
+import Login from '../sections/blog/admin/Login';
+import DummyProtected from '../sections/blog/admin/DummyProtected';
 import Team from '../sections/team/Team';
 
 export const MENU_ROUTES = [{
@@ -48,4 +50,10 @@ export const COMPONENT_ROUTES = [{
 }, {
     component: BlogAdmin,
     path: '/gestor-blog'
+}, {
+    component: DummyProtected,
+    path: '/secret',
+}, {
+    component: Login,
+    path: '/signin'
 }];

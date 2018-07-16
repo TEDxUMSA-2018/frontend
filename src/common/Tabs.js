@@ -7,7 +7,7 @@ class Tabs extends React.Component {
 
     renderNavItem(key) {
         let tab = this.props.children[key];
-        const tabClass = this.state.activeIndex == key ? 'is-active' : '';
+        const tabClass = this.state.activeIndex === key ? 'is-active' : '';
         return (
             <li key={ key } className={ `desktop-tab ${ tabClass }` }>
                 <a onClick={ this.handleOnClick.bind(this, key) }>{ tab.props.title }</a>
@@ -22,7 +22,7 @@ class Tabs extends React.Component {
 
         let tabs = React.Children.map(this.props.children, function (child) {
             return React.cloneElement(child, {
-                active: child.props.active === true ? true : (activeIndex == index++)
+                active: child.props.active === true ? true : (activeIndex === index++)
             });
         });
 
