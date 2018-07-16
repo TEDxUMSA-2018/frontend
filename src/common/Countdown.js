@@ -28,26 +28,34 @@ class Countdown extends React.Component{
             remainingMins,
             remainingSecs
         } = this.state
+        // return (
+        //     <div className="countdown card">
+        //         <footer className="card-footer">
+        //             <p className="card-footer-item">
+        //                 {remainingDays}
+        //                 <br/> días
+        //             </p>
+        //             <p className="card-footer-item">
+        //                 {remainingHours}
+        //                 <br/> horas
+        //             </p>
+        //             <p className="card-footer-item">
+        //                 {remainingMins}
+        //                 <br/> minutos
+        //             </p>
+        //             <p className="card-footer-item">
+        //                 {remainingSecs}
+        //                 <br/> segundos
+        //             </p>
+        //         </footer>
+        //     </div>
+        // );
         return (
-            <div className="countdown card">
-                <footer className="card-footer">
-                    <p className="card-footer-item">
-                        {remainingDays}
-                        <br/> días
-                    </p>
-                    <p className="card-footer-item">
-                        {remainingHours}
-                        <br/> horas
-                    </p>
-                    <p className="card-footer-item">
-                        {remainingMins}
-                        <br/> minutos
-                    </p>
-                    <p className="card-footer-item">
-                        {remainingSecs}
-                        <br/> segundos
-                    </p>
-                </footer>
+            <div className="column is-4 is-5-fullhd is-offset-1-fullhd">
+                <div className="section-header has-text-centered">
+                    <h1 className="day-number title">{remainingDays}</h1>
+                    <h2 className="days subtitle is-3">días</h2>
+                </div>
             </div>
         );
         
