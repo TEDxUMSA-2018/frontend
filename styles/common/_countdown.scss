@@ -11,4 +11,12 @@
         width: 70px;
         font-weight: 700;
     }
+    .remaining-days {
+        font-size: 10vw !important;
+        font-family: $balooFont;
+        color: $pinkColor;
+    }
+    .rem-legend {
+        font-size: 7vw;
+    }
 }
