@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {
-	BrowserRouter as Router,
-	Route
+  HashRouter as Router,
+  Route
 } from 'react-router-dom';
 
 import {
@@ -13,7 +13,7 @@ import {
 	Footer
 } from './common';
 
-class App extends React.Component {	
+class App extends React.Component {
 	// HOOKS
 	render() {
 		return (

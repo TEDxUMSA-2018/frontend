@@ -16,7 +16,7 @@ export default class Home extends React.Component{
                 className="home-page"
             >
                 { this.renderHero() }
-                <div className="container is-fullhd">
+                <div className="content-container">
                     { this.renderFirstRow() }
                     { this.renderSecondRow() }
                     { this.renderThirdRow() }
@@ -27,11 +27,11 @@ export default class Home extends React.Component{
 
     // HOOKS
 
-    componentDidMount = () => {
+    componentDidMount() {
         const googleMaps = window.google.maps;
         const mapContainer = document.getElementById('map');
         const mapLatLon = {
-            lat: -16.50497825, 
+            lat: -16.50497825,
             lng: -68.13013482
         };
         const mapConfig = {
@@ -52,7 +52,11 @@ export default class Home extends React.Component{
             <div className="hero-body">
                 <div className="container container-desktop is-vcentered is-hidden-touch">
                     <div className="columns is-vcentered">
-                        <Countdown deadline={new Date("Sep 15, 2018 08:00:00").getTime()} />
+                        <div className="column is-4">
+                            <div className="section-header has-text-centered">
+                                <Countdown deadline={new Date("Sep 15, 2018 08:00:00").getTime()} />
+                            </div>
+                        </div>
                         <div className="column is-2" />
                         <div className="column is-6">
                             <div className="section-header">
@@ -67,9 +71,7 @@ export default class Home extends React.Component{
                         <h1 className="title">
                             TEDxUMSA 2018
                         </h1>
-                        <h2 className="subtitle">
-                            67 días
-                        </h2>
+                        <Countdown deadline={new Date("Sep 15, 2018 08:00:00").getTime()} />
                     </div>
                 </div>
             </div>
@@ -79,16 +81,16 @@ export default class Home extends React.Component{
     renderFirstRow = () => (
         <div className="columns is-gapless">
             <div className="column column-style is-6">
-                <img src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ height: '100vh', objectFit: 'cover' }} />
+                <img alt="TED talk" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ height: '100vh', objectFit: 'cover' }} />
             </div>
             <div className="column column-style is-6 version">
                 <div>
                     <div className="has-text-centered">
-                        <h1 className="title is-centered">2<span className="small">da</span></h1>
-                        <h2 className="subtitle is-centered">versión</h2>
+                        <h1 className="title is-size-1 is-centered">2<span className="is-size-5">da</span></h1>
+                        <h2 className="subtitle is-size-1 is-centered">versión</h2>
                     </div>
                     <div className="is-vcentered content content-text">
-                        <p>Los organizadores de TEDxUMSA no organizan eventos por razones políticas, recompensas monetarias o ganancias personales, lo hacen porque realmente creen en que una idea puede cambiar el mundo</p>
+                        <p className="is-size-5">Los organizadores de TEDxUMSA no organizan eventos por razones políticas, recompensas monetarias o ganancias personales, lo hacen porque realmente creen en que una idea puede cambiar el mundo</p>
                     </div>
                 </div>
             </div>
@@ -100,12 +102,12 @@ export default class Home extends React.Component{
             <div className="column column-style is-6 ted-tedx">
                 <div>
                     <div className="has-text-centered">
-                        <h1 className="title is-centered">¿Qué es TED y TEDx?</h1>
+                        <h1 className="title is-size-1 is-centered">¿Qué es TED y TEDx?</h1>
                     </div>
                     <div className="content content-text has-text-centered">
-                        <p>TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial    </p>
+                        <p className="is-size-3">TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial    </p>
                         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                            <img className="image" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ width: '80%', height: '80%' }} />
+                            <img alt="TED talk" className="image" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ width: '80%', height: '80%' }} />
                         </div>
                     </div>
                 </div>
@@ -113,10 +115,10 @@ export default class Home extends React.Component{
             <div className="column column-style is-6 tedxumsa">
                 <div>
                     <div className="has-text-centered">
-                        <h1 className="title is-centered">TEDxUMSA</h1>
+                        <h1 className="title is-size-1 is-centered">TEDxUMSA</h1>
                     </div>
                     <div className="content content-text">
-                        <p>TEDx fue creado en el espiritu de la misión de TED que es Difundir Ideas Valiosas. Fue diseñado para dar a las comunidades la oportunidad de estimular el diálogo y a vivir experiencias parecidas a las vividas en TED a un nivel local.</p>
+                        <p className="is-size-5">TEDx fue creado en el espiritu de la misión de TED que es Difundir Ideas Valiosas. Fue diseñado para dar a las comunidades la oportunidad de estimular el diálogo y a vivir experiencias parecidas a las vividas en TED a un nivel local.</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +129,7 @@ export default class Home extends React.Component{
         <React.Fragment>
             <div className="columns is-gapless where">
                 <div className="hero-body has-text-centered">
-                    <h1 className="title is-text-centered">
+                    <h1 className="title is-size-1 is-text-centered">
                         ¿Dónde?
                     </h1>
                 </div>

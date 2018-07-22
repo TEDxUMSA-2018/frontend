@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SectionTitle, Description, SectionSubtitle } from '../../common';
+import { SectionTitle, Description } from '../../common';
 import MemberCard from './components/MemberCard';
 
 const TEAM = [{
@@ -71,7 +71,7 @@ export default class Team extends React.Component{
         <React.Fragment>
             <div className="columns">
                 { TEAM.slice(0, 3).map( (member, index) =>
-                    <div className="column is-4">
+                    <div key={`team-${index}`} className="column is-4">
                         <MemberCard
                             imageURL={member.imageURL} 
                             name={member.name}
@@ -85,7 +85,7 @@ export default class Team extends React.Component{
             </div>
             <div className="columns">
                 { TEAM.slice(3).map( (member, index) =>
-                    <div className="column is-4">
+                    <div key={`team-${index}`} className="column is-4">
                         <MemberCard
                             imageURL={member.imageURL} 
                             name={member.name}
