@@ -1,115 +1,90 @@
 import React from 'react';
 
-import { 
-    Description,
-    SectionTitle, 
-    SectionSubtitle, 
-    Tabs, 
-    Tab 
-} from '../../common';
-
-const PACKAGE_TABS = {
-    package1: {
-        name: 'Paquete Gold',
-        id: 'p1',
-        benefits: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ],
-        price: 1010
-    },
-    package2: {
-        name: 'Paquete Silver',
-        id: 'p2',
-        benefits: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ],
-        price: 1000
-    },
-    package3: {
-        name: 'Paquete Premium',
-        id: 'p3',
-        benefits: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ],
-        price: 900
-    },
-    package4: {
-        name: 'Package 4',
-        id: 'p4',
-        benefits: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        ],
-        price: 800
-    },
-}
-
 export default class Sponsors extends React.Component{
     render(){
         return (
             <div className="sponsors-page">
-                <SectionTitle
-                    title="Sponsors"
-                    background="pink"
-                />
-
-                { this._get_content() }  
+                <section className="hero is-fullheight is-primary has-background-black">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title is-size-1-desktop is-size-2-mobile">
+                                ¿POR QUÉ SER UN AUSPICIADOR?
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+                <section className="hero is-fullheight is-primary has-background-black">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <div className="columns">
+                                <div className="column is-3"/>
+                                <div className="column">
+                                    <h1 className="title is-green is-size-1-desktop is-size-3-mobile">
+                                        RECONOCIMIENTO INTERNACIONAL
+                                    </h1>
+                                    <h2>
+                                        Siendo este evento parte de la organización internacional TED, esperamos contar con su apoyo para la realización del TEDxUMSA debido a que es una gran oportunidad para los jóvenes bolivianos de encontrar su propósito personal y así formar una Bolivia mejor, mediante ideas que cambien actitudes. Esto será posible gracias a los expositores y auspiciadores que serán reconocidos internacionalmente a través de este evento.
+                                    </h2>
+                                </div>
+                                <div className="column is-3"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="hero is-fullheight is-primary has-background-black">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <div className="columns">
+                                <div className="column is-4"/>
+                                <div className="column">
+                                    <h1 className="title is-number is-green">
+                                        4
+                                    </h1>
+                                    <h2>
+                                        Tenemos cuatro tipos de paquetes para nuestros auspiciadores con diferentes beneficios de visibilidad antes, durante y despues del evento.
+                                    </h2>
+                                </div>
+                                <div className="column is-4"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="hero is-fullheight is-primary has-background-black">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <div className="columns">
+                                <div className="column">
+                                    <h1 className="title is-number is-green is-hidden-mobile">
+                                        + 10000
+                                    </h1>
+                                    <h1 className="title is-number is-green is-hidden-tablet">
+                                        + 10 K
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="columns">
+                                <div className="column is-4"/>
+                                <div className="column">
+                                    <h2>
+                                        Llegaremos a más de 100 jóvenes universitarios, 100 asistentes presenciales mas los que verán el evento transmitido en vivo por streaming y por el canal oficial de YouTube.
+                                    </h2>
+                                </div>
+                                <div className="column is-4"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="hero is-fullheight is-primary has-background-white">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title is-size-1 has-text-black-bis">
+                                Auspiciadores TEDxUMSA 2017
+                            </h1>
+                            <img src="images/2017.jpg" alt="Auspiciadores 2017"/>
+                        </div>
+                    </div>
+                </section>
             </div>
         )
     }
-
-    _get_content = () => {
-        return (
-            <React.Fragment>
-                <Description 
-                    title="¿Por qué ser un auspiciador TEDxUMSA?"
-                    description="Como auspiciador de TEDxUMSA, podrá tener la oportunidad de entablar un diálogo auténtico con un público valioso y ambicioso: gente apasionada y de mente abierta. Su participación en nuestro evento no es solo para presentar nuevas ideas, sino también para aprender de TEDx y su comunidad."
-                    imagePath="/images/ted.png"
-                    leftImage={false}
-                />
-                <SectionSubtitle
-                    title="¿Qué ofrecemos?"
-                />
-                <br/>
-                <br/>
-                <br/>
-                <Tabs tabsTitle="Paquetes de Auspicio">
-                    { this._get_tabs() }
-                </Tabs> 
-            </React.Fragment>
-        );
-    }
-    
-    _get_tabs = () => 
-        Object.keys(PACKAGE_TABS).map( (pack, index) => 
-            <Tab
-                key={`${PACKAGE_TABS[pack].id}-${index}`}
-                active={ index === 0 ? "true" : null }
-                title={ PACKAGE_TABS[pack].name }
-            >
-                <article className="message is-medium is-primary">
-                    <div className="message-header">
-                        <p>{ PACKAGE_TABS[pack].name }</p>
-                    </div>
-                    <div className="message-body">
-                        <ul>
-                            { PACKAGE_TABS[pack].benefits.map( (ben, idx) => 
-                                <li className="benefit-list" key={`ben-${idx}`}>{ ben }</li>
-                            ) }
-                        </ul>
-                        <h1 className="price title is-3">Inversion: $ {PACKAGE_TABS[pack].price}</h1>
-                    </div>
-
-                </article>
-            </Tab>
-        );
 }

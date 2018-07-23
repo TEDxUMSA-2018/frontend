@@ -30,6 +30,7 @@ class App extends React.Component {
 									component={item.component}
 								/>
 							)}
+							<Footer/>
 						</div>
 					</Router>
 				</div>

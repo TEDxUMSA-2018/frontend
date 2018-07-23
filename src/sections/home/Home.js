@@ -128,10 +128,14 @@ export default class Home extends React.Component{
     renderThirdRow = () => (
         <React.Fragment>
             <div className="columns is-gapless where">
-                <div className="hero-body has-text-centered">
-                    <h1 className="title is-size-1 is-text-centered">
-                        ¿Dónde?
-                    </h1>
+                <div className="hero is-fullheight">
+                <div className="hero-body">
+                    <div className="container has-text-centered">
+                        <h1 className="title is-size-1">
+                            ¿Dónde?
+                        </h1>
+                    </div>
+                </div>
                 </div>
             </div>
             <div className="columns">

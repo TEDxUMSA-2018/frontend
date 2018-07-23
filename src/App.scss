@@ -1,14 +1,19 @@
-// Main scss file, used to import mixins, global variables, and stylesheets for each
-// component.
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
 
+$purple: hsl(275,87%,45%);
+$purple-invert: findColorInvert($purple);
 
-// Global variables and bulma theming
-//@import 'bulma/bulma.sass';
+@import "bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "purple":($purple, $purple-invert),
+);
+$colors: map-merge($colors, $addColors);
 
 // Global variables
 @import 'styles/_globals.scss';
-
-@import 'bulma/bulma.sass';
+@import 'bulma/bulma';
+// @import '../node_modules/bulma-extensions/dist/css/bulma-extensions.sass';
 
 // Common components
 @import '../styles/common/_countdown.scss';

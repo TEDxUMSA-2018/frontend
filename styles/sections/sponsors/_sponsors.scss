@@ -1,11 +1,17 @@
 .sponsors-page {
-    .message-body {
-        min-height: 500px;
-        .benefit-list {
-            list-style-type: circle;
+    .title {
+        font-family: $balooFont;
+        &.is-green {
+            color: $greenColor;
         }
-        .price {
-            text-align: right;
+        &.is-number {
+            font-size: 150px;
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .is-number {
+        font-size: 100px !important;
     }
 }
