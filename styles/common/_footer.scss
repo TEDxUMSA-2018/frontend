@@ -1,4 +1,12 @@
 .app-footer {
+  background-color: $blackColor;
+  a, p, li {
+    color: $whiteColor;
+  }
+  a:hover{
+    background-color: $greenColor;
+    color: $blackColor;
+  }
   .menu-label {
     color: $greenColor;
     font-weight: 700;

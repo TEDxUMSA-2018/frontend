@@ -9,7 +9,7 @@ import {
 class Footer extends React.Component{
     render(){
         return (
-            <footer className="app-footer section is-medium has-background-black" style={{ padding: 20 }}>
+            <footer className="app-footer section is-medium" style={{ padding: 20 }}>
                 <div className="container">
                     <div className="columns">
                         <div className="column is-5 is-4-widescreen">
@@ -31,7 +31,7 @@ class Footer extends React.Component{
         <div className="summary">
             <a className="brand" href="/">
                 <div className="brand-icon">
-                    <img alt="TEDxUMSA" role="presentation" src="/images/TEDxUMSA1.png"/>
+                    <img alt="TEDxUMSA" role="presentation" src="/images/TEDxUMSA5.png"/>
                 </div>
             </a>
             <p>© 2017 - 2018 TEDxUMSA</p>
