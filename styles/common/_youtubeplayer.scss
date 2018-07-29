@@ -1,7 +1,4 @@
 .video{
-    // position: relative;
-    // height: 100%;
-    // width: 100%;
     .vid-thumbnail-container {
         position: relative;
         height: 100%;
@@ -26,6 +23,7 @@
         h2{
             height: 100%;
             font-weight: 700;
+            color: $whiteColor;
         }
     }
 }
