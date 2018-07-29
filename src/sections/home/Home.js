@@ -81,7 +81,7 @@ export default class Home extends React.Component{
     renderFirstRow = () => (
         <div className="columns is-gapless">
             <div className="column column-style is-6">
-                <img alt="TED talk" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ height: '100vh', objectFit: 'cover' }} />
+                <img alt="TED talk" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ height: '100vh', objectFit: 'cover', width: "100%" }} />
             </div>
             <div className="column column-style is-6 version">
                 <div>
@@ -127,19 +127,17 @@ export default class Home extends React.Component{
 
     renderThirdRow = () => (
         <React.Fragment>
-            <div className="columns is-gapless where">
-                <div className="hero is-fullheight">
+            <section className="hero where is-fullheight">
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <h1 className="title is-size-1">
+                        <h1 className="where title is-size-1">
                             ¿Dónde?
                         </h1>
                     </div>
                 </div>
-                </div>
-            </div>
+            </section>
             <div className="columns">
-                <div className="column is-7 is-gapless" id="map" style={{ height: '100vh' }} />
+                <div className="column is-7 is-gapless" id="map" />
                 <div className="column is-5 details">
                     <dl>
                         <dt className="is-size-2">LUGAR</dt>

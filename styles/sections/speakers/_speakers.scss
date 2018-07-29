@@ -1,6 +1,27 @@
-.speakers-cont {
-  display:flex;
-  flex-wrap: wrap;
-  width: 80%;
-  padding: 0 10% 0 10%;
+.speakers-page {
+  .version18 {
+    background-color: $pinkColor;
+    .messages {
+      color: $blackColor;
+    }
+  }
+  .version17 {
+    background-color: $blackColor;
+  }
+  .year {
+    font-family: $balooFont;
+    font-size: 150px !important;
+    &.past{
+      color: $pinkColor;
+    }
+    &.current{
+      color: $greenColor;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .year {
+    font-size: 100px !important;
+  }
 }

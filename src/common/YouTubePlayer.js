@@ -9,29 +9,30 @@ class YouTubePlayer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.init();
-        this.video = props.videoId;
+        this.videoRef = React.createRef();
+        // this.init();
+        // this.video = props.videoId;
         this.state = {
             isModalOpen: false,
             thumbnailUrl: ''
         }
     
-        window['onYouTubeIframeAPIReady'] = e => {
-            this.YT = window['YT'];
-            this.reframed = false;
-            this.player = new window['YT'].Player('playerContainer', {
-                videoId: this.video,
-                playerVars: {
-                    controls: 0,
-                    rel: 0
-                },
-                events: {
-                    'onStateChange': this.onPlayerStateChange.bind(this),
-                    'onError': this.onPlayerError.bind(this),
-                    'onReady': this.onPlayerReady.bind(this)
-                }
-            });
-        };
+        // window['onYouTubeIframeAPIReady'] = e => {
+        //     this.YT = window['YT'];
+        //     this.reframed = false;
+        //     this.player = new window['YT'].Player('playerContainer', {
+        //         videoId: props.videoId,
+        //         playerVars: {
+        //             controls: 0,
+        //             rel: 0
+        //         },
+        //         events: {
+        //             'onStateChange': this.onPlayerStateChange.bind(this),
+        //             'onError': this.onPlayerError.bind(this),
+        //             'onReady': this.onPlayerReady.bind(this)
+        //         }
+        //     });
+        // };
     }
     
     render() {
@@ -50,12 +51,14 @@ class YouTubePlayer extends React.Component {
         } = this.props;
         return (
             <figure className="video image is-256x256">
-                <img 
-                    alt="vid"
-                    className="vid-thumbnail"
-                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
-                />
-                <div onClick={ this.openVideo } className="play-button"/>
+                <div className="vid-thumbnail-container">
+                    <img 
+                        alt="vid"
+                        className="vid-thumbnail"
+                        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+                    />
+                    <div onClick={ this.openVideo } className="play-button"/>
+                </div>
                 <div className="video-description">
                     <h2>{ videoDescription }</h2>
                 </div>
@@ -72,7 +75,16 @@ class YouTubePlayer extends React.Component {
                     onClick={ this.closeVideo }
                     className="modal-background stop-button"
                 />
-                <div className="modal-content" id="playerContainer" />
+                <div className="modal-content" id="playerContainer">
+                    <iframe
+                        title="A nice video"
+                        width="560" 
+                        height="315" 
+                        src={`https://www.youtube.com/embed/${this.props.videoId}`}
+                        frameBorder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowFullScreen />
+                </div>
                 <button 
                     onClick={ this.closeVideo }
                     className="modal-close is-large stop-button" 
@@ -152,6 +164,9 @@ class YouTubePlayer extends React.Component {
         this.setState({
             isModalOpen: true
         })
+        // debugger;
+        // this.videoRef.current.src = `https;//www.youtube.com/watch?v=${this.props.videoId}`
+        // console.log(this.videoRef);
     }
 
     closeVideo = () => {

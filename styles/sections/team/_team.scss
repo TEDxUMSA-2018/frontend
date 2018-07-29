@@ -1,7 +1,5 @@
 .team-page{
     .legend{
-        // background: url("./resources/images/bg_image.png") center center no-repeat;
-        // background: url("../public/images/team/team.jpg") center center no-repeat;
         background-image: url("../public/images/team/team.jpg");
         background-size: cover;
         background-position: center center;
@@ -10,12 +8,15 @@
             color: $blackColor !important;
         }
     }
-    .member-card{
-        box-shadow: none;
+    .event {
+        font-size: 70px !important;
     }
-    .card-content{
-        * {
-            color: $whiteColor !important;
+    @media only screen and (max-width: 768px) {
+        .event {
+            font-size: 55px !important;
+        }
+        .who {
+            font-size: 30px !important;
         }
     }
 }

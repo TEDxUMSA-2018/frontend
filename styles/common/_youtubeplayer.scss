@@ -1,19 +1,23 @@
 .video{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    
-    .play-button{
-        transition: background-color 0.5s linear 0s;
-        position: absolute;
-        top: 0;
-        left: 0;
+    // position: relative;
+    // height: 100%;
+    // width: 100%;
+    .vid-thumbnail-container {
+        position: relative;
         height: 100%;
         width: 100%;
-        cursor: pointer;
-        background: url('/images/playbtn.png') center no-repeat;
-        &:hover{
-            background-color: $blackColorTransp7;
+        .play-button{
+            transition: background-color 0.5s linear 0s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            background: url('/images/playbtn.png') center no-repeat;
+            &:hover{
+                background-color: $blackColorTransp7;
+            }
         }
     }
     .video-description{

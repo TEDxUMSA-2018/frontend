@@ -5,6 +5,7 @@ export * from './Header';
 export * from './IconDetail';
 export * from './ImageDescription';
 export * from './OverlayNavbar';
+export * from './PersonCard';
 export * from './SectionSubtitle';
 export * from './SectionTitle';
 export * from './Tabs';
