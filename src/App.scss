@@ -33,9 +33,10 @@ $colors: map-merge($colors, $addColors);
 @import '../styles/sections/about/_about.scss';
 @import '../styles/sections/blog/_blog.scss';
 @import '../styles/sections/home/_home.scss';
+@import '../styles/sections/participate/_participate.scss';
 @import '../styles/sections/speakers/_speakers';
 @import '../styles/sections/sponsors/_sponsors';
-@import '../styles/sections/team/team';
+@import '../styles/sections/team/_team';
 
 @font-face {
   font-family: Baloo;
