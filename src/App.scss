@@ -23,6 +23,7 @@ $colors: map-merge($colors, $addColors);
 @import '../styles/common/image_description';
 @import '../styles/common/_navbar.scss';
 @import '../styles/common/_overlay-menu.scss';
+@import '../styles/common/_person-card.scss';
 @import '../styles/common/_section_title.scss';
 @import '../styles/common/_section_subtitle.scss';
 @import '../styles/common/_tabs.scss';
@@ -32,9 +33,10 @@ $colors: map-merge($colors, $addColors);
 @import '../styles/sections/about/_about.scss';
 @import '../styles/sections/blog/_blog.scss';
 @import '../styles/sections/home/_home.scss';
-@import '../styles/sections/speakers/speakers';
+@import '../styles/sections/participate/_participate.scss';
+@import '../styles/sections/speakers/_speakers';
 @import '../styles/sections/sponsors/_sponsors';
-@import '../styles/sections/team/team';
+@import '../styles/sections/team/_team';
 
 @font-face {
   font-family: Baloo;

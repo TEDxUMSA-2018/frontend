@@ -1,3 +1,4 @@
+
 import React from 'react';
 import 'react-quill/dist/quill.snow.css';
 import BlogPost from './BlogPost';
@@ -18,13 +19,13 @@ class Blog extends React.Component {
         this.iframeElement = React.createRef();
     }
 
-    componentDidMount(){
-        database.on('value', snapshot => {
-            this.setState({
-                posts: snapshot.val()
-            })
-        });
-    }
+    // componentDidMount(){
+    //     database.on('value', snapshot => {
+    //         this.setState({
+    //             posts: snapshot.val()
+    //         })
+    //     });
+    // }
 
     render() {
         return (

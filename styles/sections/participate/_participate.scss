@@ -1,0 +1,42 @@
+.participate-page {
+    .subtitle, .title {
+        font-family: $balooFont;
+    }
+    h2 {
+        color: $greenColor;
+    }
+    h4 {
+        color: $pinkColor;
+        font-family: $balooFont;
+    }
+    h1, h4{
+        cursor: pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .hero-form {
+        .navbar-item{
+            color: $greenColor;
+            font-weight: 700;
+        }
+        label {
+            color: $whiteColor !important;
+            font-family: $balooFont;
+        }
+        button {
+            font-family: $balooFont;
+            color: $whiteColor;
+            background-color: $pinkColor;
+        }
+        ::placeholder {
+            color: $blackColorTransp5;
+        }
+        .message{
+            .message-header{
+                font-family: $balooFont;
+                background-color: $greenColor;
+            }
+        }
+    }
+}

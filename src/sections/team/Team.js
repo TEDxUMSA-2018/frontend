@@ -1,6 +1,39 @@
 import React from 'react';
-import MemberCard from './components/MemberCard';
-// import Background from '../../../public/images/team/team.jpg';
+import { PersonCard } from '../../common';
+
+const TEAM = [{
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}, {
+    name: 'Ana Quispe',
+    imageURL: 'images/team/ana.png',
+    job: 'Licenciataria'
+}]
 
 export default class Team extends React.Component{
     render(){
@@ -9,10 +42,10 @@ export default class Team extends React.Component{
                 <section className="hero legend is-fullheight">
                     <div className="hero-body">
                         <div className="container has-text-centered">
-                            <h2 className="subtitle is-size-2">
+                            <h2 className="who subtitle is-size-2">
                                 Nosotros hacemos
                             </h2>
-                            <h1 className="title is-size-1">
+                            <h1 className="event title is-size-1">
                                 TEDxUMSA
                             </h1>
                         </div>
@@ -22,46 +55,14 @@ export default class Team extends React.Component{
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <div className="columns is-multiline">
-                                <MemberCard
-                                    imageURL='images/team/ana.png'
-                                    name='Ana Quispe'
-                                    position='Licenciataria'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
-                                <MemberCard
-                                    imageURL='images/team/carlos.jpg'
-                                    name='Carlos Zabaleta'
-                                    position='King in the north'
-                                />
+                                {TEAM.map( (person, index) => (
+                                    <PersonCard
+                                        key={`team-${index}`}
+                                        imageURL={person.imageURL}
+                                        name={person.name}
+                                        description={person.job}
+                                    />
+                                ) )}
                             </div>
                         </div>
                     </div>

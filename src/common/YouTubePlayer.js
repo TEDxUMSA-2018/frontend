@@ -1,164 +1,86 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
+import Lightbox from 'lightbox-react';
 
-class YouTubePlayer extends React.Component {
-    static proptypes = {
-        videoId: PropTypes.string.isRequired,
-        videoDescription: PropTypes.isRequired
-    }
+const VideoIframe = ({ videoId, videoTitle }) => (
+    <iframe 
+        title={videoTitle} 
+        width="560" 
+        height="315" 
+        src={`https://www.youtube.com/embed/${videoId}`}
+        frameBorder="0" 
+        allow="autoplay; encrypted-media" 
+        allowFullScreen
+        style={{
+            maxWidth: '100%',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            margin: 'auto',
+            top: '50%',
+            transform: 'translateY(-50%)'
+        }} 
+    />
+)
 
-    constructor(props) {
-        super(props);
-        this.init();
-        this.video = props.videoId;
-        this.state = {
-            isModalOpen: false,
-            thumbnailUrl: ''
-        }
-    
-        window['onYouTubeIframeAPIReady'] = e => {
-            this.YT = window['YT'];
-            this.reframed = false;
-            this.player = new window['YT'].Player('playerContainer', {
-                videoId: this.video,
-                playerVars: {
-                    controls: 0,
-                    rel: 0
-                },
-                events: {
-                    'onStateChange': this.onPlayerStateChange.bind(this),
-                    'onError': this.onPlayerError.bind(this),
-                    'onReady': this.onPlayerReady.bind(this)
-                }
-            });
-        };
+class YouTubePlayer extends Component {
+    state = {
+        isOpen: false
     }
-    
+    static defaultProps = {
+        imageName: 'hqdefault'
+    }
     render() {
+        const {videoId, videoTitle} = this.props;
+        const {isOpen} = this.state;
         return (
-            <React.Fragment>
-                { this._get_video_thumbnail() }
-                { this._get_video_modal() }
-            </React.Fragment>
+            <Fragment>
+                { this.renderVideoThumbnail() }
+                { isOpen && 
+                    <Lightbox
+                        mainSrc={<VideoIframe videoId={videoId} videoTitle={videoTitle} />}
+                        onCloseRequest={this.closeModal}
+                        enableZoom={false}
+                        mainSrcThumbnail={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                    /> 
+                }
+            </Fragment>
         );
     }
 
-    _get_video_thumbnail = () => {
+    renderVideoThumbnail = () => {
         const {
+            imageName,
             videoId,
-            videoDescription
+            videoTitle
         } = this.props;
         return (
-            <figure className="video image is-256x256">
-                <img 
-                    alt="vid"
-                    className="vid-thumbnail"
-                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
-                />
-                <div onClick={ this.openVideo } className="play-button"/>
+            <figure className="video image is-256x256" onClick={this.openModal}>
+                <div className="vid-thumbnail-container">
+                    <img 
+                        alt="vid"
+                        className="vid-thumbnail"
+                        src={`https://img.youtube.com/vi/${videoId}/${imageName}.jpg`} 
+                    />
+                    <div onClick={ this.openVideo } className="play-button"/>
+                </div>
                 <div className="video-description">
-                    <h2>{ videoDescription }</h2>
+                    <h2>{ videoTitle }</h2>
                 </div>
             </figure>
         )
     }
 
-    _get_video_modal = () => {
-        const { isModalOpen } = this.state;
-        const modalCls = isModalOpen ? 'is-active' : ''
-        return (
-            <div className={`modal ${modalCls}`}>
-                <div 
-                    onClick={ this.closeVideo }
-                    className="modal-background stop-button"
-                />
-                <div className="modal-content" id="playerContainer" />
-                <button 
-                    onClick={ this.closeVideo }
-                    className="modal-close is-large stop-button" 
-                    aria-label="close" />
-            </div>
-        );
-    }
-
-    init() {
-        var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    }
-    
-    onPlayerStateChange(event) {
-        switch (event.data) {
-            case window['YT'].PlayerState.PLAYING:
-                if (this.cleanTime() === 0) {
-                    console.log('started ' + this.cleanTime());
-                } else {
-                    console.log('playing ' + this.cleanTime())
-                };
-                break;
-            case window['YT'].PlayerState.PAUSED:
-                if (this.player.getDuration() - this.player.getCurrentTime() !== 0) {
-                    console.log('paused @ ' + this.cleanTime());
-                };
-                break;
-            case window['YT'].PlayerState.ENDED:
-                console.log('ended ');
-                break;
-            default: break;
-        };
-    };
-    
-    onPlayerReady = e => {
-        if (!this.reframed) {
-            this.reframed = true;
-        }
-        const play = () => { this.player.playVideo() }
-        const stop = () => { this.player.stopVideo() }
-
-        var playButton = document.getElementsByClassName("play-button");
-        for(let btn of playButton){
-            btn.addEventListener("click", () => {
-                play();
-            });
-        }
-
-        var stopButton = document.getElementsByClassName("stop-button");
-        for(let btn of stopButton){
-            btn.addEventListener("click", () => {
-                stop();
-            });
-        }
-    }
-
-    cleanTime() {
-        return Math.round(this.player.getCurrentTime())
-    };
-    
-    onPlayerError(event) {
-        switch (event.data) {
-            case 2:
-                console.log('' + this.video)
-                break;
-            case 100:
-                break;
-            case 101 || 150:
-                break;
-            default: break;
-        };
-    };
-
-    openVideo = () => {
+    openModal = () => {
         this.setState({
-            isModalOpen: true
+            isOpen: true
         })
     }
 
-    closeVideo = () => {
+    closeModal = () => {
         this.setState({
-            isModalOpen: false
+            isOpen: false
         })
     }
 }
 
-export {YouTubePlayer};
+export { YouTubePlayer };
