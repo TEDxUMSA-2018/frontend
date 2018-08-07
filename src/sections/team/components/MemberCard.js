@@ -1,23 +1,19 @@
 import React from 'react';
 
-const MemberCard = ({imageURL, name, position, quote, favoriteTalkTitle, favoriteTalkURL}) => {
+const MemberCard = ({imageURL, name, position}) => {
     return (
-        <div className="member-card card">
-            <div className="card-image">
-                <figure className="image is-4by3">
-                    <img src={imageURL} alt={name}/>
-                </figure>
-            </div>
-            <div className="card-content">
-                <div className="media">
-                    <div className="media-content">
-                        <p className="title is-5">{name} ({position})</p>
-                    </div>
+        <div className="column is-3">
+            <div className="card member-card">
+                <div className="card-image">
+                    <figure className="image is-square">
+                        <img src={imageURL} alt={name} />
+                    </figure>
                 </div>
-                <div className="content">
-                    <blockquote>{quote}</blockquote>
-                    <h2 className="subtitle is-6">Charla TED Favorita</h2>
-                    <a target="_blank" href={favoriteTalkURL}>{favoriteTalkTitle}</a>
+                <div className="card-content has-background-black">
+                    <div className="content has-text-color-white">
+                        <p className="title is-4">{name}</p>
+                        <p className="subtitle is-6">{position}</p>
+                    </div>
                 </div>
             </div>
         </div>

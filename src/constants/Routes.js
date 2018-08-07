@@ -1,11 +1,7 @@
-import About from '../sections/about/About';
 import Home from '../sections/home/Home';
 import Speakers from '../sections/speakers/Speakers';
 import Sponsors from '../sections/sponsors/Sponsors';
 import Blog from '../sections/blog/Blog';
-import BlogAdmin from '../sections/blog/admin/BlogAdmin';
-import Login from '../sections/blog/admin/Login';
-import DummyProtected from '../sections/blog/admin/DummyProtected';
 import Participate from '../sections/participate/Participate';
 import Team from '../sections/team/Team';
 
@@ -22,14 +18,11 @@ export const MENU_ROUTES = [{
     text: 'Expositores',
     path: '/expositores'
 }, {
-    text: 'Areas de Trabajo',
-    path: '/areas'
+    text: 'Blog',
+    path: '/blog'
 }, {
     text: 'Participar',
     path: '/participar'
-}, {
-    text: 'Blog',
-    path: '/blog'
 }];
 
 export const COMPONENT_ROUTES = [{
@@ -46,12 +39,9 @@ export const COMPONENT_ROUTES = [{
     component: Speakers,
     path: '/expositores'
 }, {
-    component: About,
-    path: '/areas'
+    component: Blog,
+    path: '/blog'
 }, {
     component: Participate,
     path: '/participar'
-}, {
-    component: Blog,
-    path: '/blog'
 }];

@@ -44,7 +44,7 @@
 	}
 	.content-container {
 		// margin: 0;
-		height: 100vh;
+		min-height: 100vh;
 		.columns {
 			margin-bottom: 0 !important;
 			.column-style{
