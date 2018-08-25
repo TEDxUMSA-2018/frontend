@@ -49,16 +49,16 @@ export default class Home extends React.Component{
     // DOM
     renderHero = () => (
         <section className="hero-image section is-hero">
-            <div className="hero-body">
+            <div className="hero-body" style={{ margin: 70 }}>
                 <div className="container container-desktop is-vcentered is-hidden-touch">
                     <div className="columns is-vcentered">
-                        <div className="column is-4">
+                        <div className="column is-3">
                             <div className="section-header has-text-centered">
-                                <Countdown deadline={new Date("Sep 15, 2018 08:00:00").getTime()} />
+                                <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
                             </div>
                         </div>
                         <div className="column is-2" />
-                        <div className="column is-6">
+                        <div className="column is-7">
                             <div className="section-header">
                                 <h1 className="name title">TEDxUMSA</h1>
                                 <h2 className="year subtitle is-3">2018</h2>
@@ -71,7 +71,7 @@ export default class Home extends React.Component{
                         <h1 className="title">
                             TEDxUMSA 2018
                         </h1>
-                        <Countdown deadline={new Date("Sep 15, 2018 08:00:00").getTime()} />
+                        <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
                     </div>
                 </div>
             </div>

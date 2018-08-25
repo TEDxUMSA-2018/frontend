@@ -1,6 +1,9 @@
 .home-page {
-	 margin-top: 70px;
+	 //margin-top: 70px;
 	.hero-image {
+        background-image: url("../public/images/home/landingpage.jpg");
+        background-size: cover;
+        background-position: center;
 		height: 100vh;
 	}
 	.container-desktop {
@@ -8,14 +11,14 @@
 			margin-bottom: 1rem;
 		}
 		.day-number {
-			font-size: 15vw;
+			font-size: 10vw;
 			font-family: $balooFont;
 			color: $pinkColor;
 		}
 		.days {
-			font-size: 7vw;
+			font-size: 3vw;
 			font-family: $balooFont;
-			color: $pinkColor;
+			color: $blackColor;
 		}
 		.name {
 			font-size: 7vw;
@@ -43,7 +46,6 @@
         }
 	}
 	.content-container {
-		// margin: 0;
 		min-height: 100vh;
 		.columns {
 			margin-bottom: 0 !important;

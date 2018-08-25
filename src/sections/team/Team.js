@@ -1,39 +1,6 @@
 import React from 'react';
 import { PersonCard } from '../../common';
-
-const TEAM = [{
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}, {
-    name: 'Ana Quispe',
-    imageURL: 'images/team/ana.png',
-    job: 'Licenciataria'
-}]
+import { TEAM } from "./team";
 
 export default class Team extends React.Component{
     render(){
@@ -58,9 +25,10 @@ export default class Team extends React.Component{
                                 {TEAM.map( (person, index) => (
                                     <PersonCard
                                         key={`team-${index}`}
-                                        imageURL={person.imageURL}
+                                        imageURL={index % 2 === 0 ? `${person.imageURL}bw.jpg` : `${person.imageURL}rw.jpg`}
                                         name={person.name}
                                         description={person.job}
+                                        lead={false}
                                     />
                                 ) )}
                             </div>
