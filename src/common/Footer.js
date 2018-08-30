@@ -46,6 +46,7 @@ class Footer extends React.Component{
                         <li 
                             key={`menuitem-${index}`}
                             className="is-size-7"
+                            onClick={() => { window.scroll(0,0); }}
                         >
                             <Link
                                 to={item.path}

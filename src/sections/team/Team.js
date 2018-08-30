@@ -1,6 +1,6 @@
 import React from 'react';
 import { PersonCard } from '../../common';
-import { TEAM } from "./team";
+import { TEAM } from "./teamList";
 
 export default class Team extends React.Component{
     render(){

@@ -49,9 +49,9 @@ export default class Home extends React.Component{
     // DOM
     renderHero = () => (
         <section className="hero-image section is-hero">
-            <div className="hero-body" style={{ margin: 70 }}>
+            <div className="hero-body">
                 <div className="container container-desktop is-vcentered is-hidden-touch">
-                    <div className="columns is-vcentered">
+                    <div className="columns is-vcentered" style={{ marginTop: 70 }}>
                         <div className="column is-3">
                             <div className="section-header has-text-centered">
                                 <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
@@ -68,9 +68,8 @@ export default class Home extends React.Component{
                 </div>
                 <div className="container container-mobile is-vcentered is-hidden-desktop">
                     <div className="is-vcentered">
-                        <h1 className="title">
-                            TEDxUMSA 2018
-                        </h1>
+                        <h1 className="name title">TEDxUMSA</h1>
+                        <h2 className="year subtitle is-3">2018</h2>
                         <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
                     </div>
                 </div>
@@ -81,7 +80,7 @@ export default class Home extends React.Component{
     renderFirstRow = () => (
         <div className="columns is-gapless">
             <div className="column column-style is-6">
-                <img alt="TED talk" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ height: '100vh', objectFit: 'cover', width: "100%" }} />
+                <img alt="TED talk" src="/images/home/ex.jpg" style={{ height: '100vh', objectFit: 'cover', width: "100%" }} />
             </div>
             <div className="column column-style is-6 version">
                 <div>
@@ -105,9 +104,9 @@ export default class Home extends React.Component{
                         <h1 className="title is-size-1 is-centered">¿Qué es TED y TEDx?</h1>
                     </div>
                     <div className="content content-text has-text-centered">
-                        <p className="is-size-3">TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial    </p>
+                        <p className="is-size-3">TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial.</p>
                         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                            <img alt="TED talk" className="image" src="https://tedconfblog.files.wordpress.com/2014/03/ted2014_dd_dsc_1560.jpg?w=900&h=599" style={{ width: '80%', height: '80%' }} />
+                            <img alt="TED talk" className="image" src="/images/home/paraninfo.jpg" style={{ width: '80%', height: '80%' }} />
                         </div>
                     </div>
                 </div>
@@ -150,7 +149,7 @@ export default class Home extends React.Component{
                         <dt className="is-size-2">HORA Y FECHA</dt>
                         <hr/>
                         <dd>
-                            <p>Sábado 18 de Septiembre, 2018</p>
+                            <p>Sábado 13 de Octubre, 2018</p>
                             <p>A partir de las 8:00</p>
                         </dd>
                     </dl>

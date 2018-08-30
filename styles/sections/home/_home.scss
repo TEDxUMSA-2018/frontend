@@ -1,9 +1,9 @@
 .home-page {
 	 //margin-top: 70px;
 	.hero-image {
-        background-image: url("../public/images/home/landingpage.jpg");
+		background-image: url("../public/images/home/landingpage.jpg");
         background-size: cover;
-        background-position: center;
+		background-position: center center;
 		height: 100vh;
 	}
 	.container-desktop {
@@ -28,10 +28,13 @@
 		.year {
 			font-size: 7vw;
 			font-family: $balooFont;
-			color: $blackColor;
+			color: $greenColor;
 		}
 	}
 	.container-mobile{
+		.name, .year {
+			text-align: center;
+		}
 		.title{
 			font-family: $balooFont;
 			color: $blackColor;
@@ -39,11 +42,21 @@
 		}
 		.subtitle {
 			font-family: $balooFont;
-			color: $pinkColor
+			color: $pinkColor;
+			font-size: 10vw;
+		}
+		.year {
+			font-family: $balooFont;
+			color: $greenColor;
+			font-size: 5vw;
 		}
         .day-number {
             color: $pinkColor
-        }
+		}
+		.days {
+			font-size: 6vw;
+			color: $blackColor;
+		}
 	}
 	.content-container {
 		min-height: 100vh;

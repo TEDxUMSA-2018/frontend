@@ -4,7 +4,7 @@ import { PersonCard, YouTubePlayer } from '../../common';
 const messages = [
     "Estamos buscando a los mejores expositores",
     "Seguimos escogiendo las mejores ideas"
-]
+];
 
 const SPEAKERS_2017 = [{
     name: 'Miguel Angel Figueroa',
