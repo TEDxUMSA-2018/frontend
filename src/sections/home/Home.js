@@ -52,13 +52,13 @@ export default class Home extends React.Component{
             <div className="hero-body">
                 <div className="container container-desktop is-vcentered is-hidden-touch">
                     <div className="columns is-vcentered" style={{ marginTop: 70 }}>
-                        <div className="column is-3">
+                        <div className="column is-2">
                             <div className="section-header has-text-centered">
                                 <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
                             </div>
                         </div>
                         <div className="column is-2" />
-                        <div className="column is-7">
+                        <div className="column is-8">
                             <div className="section-header">
                                 <h1 className="name title">TEDxUMSA</h1>
                                 <h2 className="year subtitle is-3">2018</h2>
@@ -67,7 +67,7 @@ export default class Home extends React.Component{
                     </div>
                 </div>
                 <div className="container container-mobile is-vcentered is-hidden-desktop">
-                    <div className="is-vcentered">
+                    <div className="is-vcentered" style={{ marginTop: 70 }}>
                         <h1 className="name title">TEDxUMSA</h1>
                         <h2 className="year subtitle is-3">2018</h2>
                         <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
@@ -104,9 +104,9 @@ export default class Home extends React.Component{
                         <h1 className="title is-size-1 is-centered">¿Qué es TED y TEDx?</h1>
                     </div>
                     <div className="content content-text has-text-centered">
-                        <p className="is-size-3">TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial.</p>
+                        <p className="is-size-4">TED es una fundación global dedicada a difundir ideas valiosas. Su alcance es a nivel mundial.</p>
                         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                            <img alt="TED talk" className="image" src="/images/home/paraninfo.jpg" style={{ width: '80%', height: '80%' }} />
+                            <img alt="TED talk" className="image" src="/images/home/paraninfo.jpg" style={{ width: '100%', height: '100%' }} />
                         </div>
                     </div>
                 </div>
