@@ -17,10 +17,12 @@ export const MENU_ROUTES = [{
 }, {
     text: 'Expositores',
     path: '/expositores'
-}, {
-    text: 'Blog',
-    path: '/blog'
-}, {
+}, 
+// {
+//     text: 'Blog',
+//     path: '/blog'
+// }, 
+{
     text: 'Participar',
     path: '/participar'
 }];
@@ -38,10 +40,12 @@ export const COMPONENT_ROUTES = [{
 }, {
     component: Speakers,
     path: '/expositores'
-}, {
-    component: Blog,
-    path: '/blog'
-}, {
+}, 
+// {
+//     component: Blog,
+//     path: '/blog'
+// }, 
+{
     component: Participate,
     path: '/participar'
 }];
