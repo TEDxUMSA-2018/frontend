@@ -145,7 +145,10 @@ export default class Form extends Component {
             function() { 
                 reactContext.setState({
                     messageVisible: true,
-                    loading: false
+                    loading: false,
+                    nameField: '',
+                    contactField: '',
+                    isVerified: false
                 }); 
             }
         );
