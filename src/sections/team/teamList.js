@@ -2,7 +2,7 @@ export const TEAM = [
     {
         name: 'Ana Huiza',
         imageURL: 'images/team/members/AnaHuiza-',
-        job: ''
+        job: 'Fotografía - Productor audiovisual'
     },
     {
         name: 'Ana Quispe',
@@ -12,92 +12,92 @@ export const TEAM = [
     {
         name: 'Andres Mamani',
         imageURL: 'images/team/members/AndresMamani-',
-        job: 'Media y Contenidos'
+        job: 'Media'
     },
     {
         name: 'Angelica Quispe',
         imageURL: 'images/team/members/AngelicaQuispe-',
-        job: 'Relaciones externas'
+        job: 'Relaciones Externas'
     },
     {
         name: 'Bruno Silva',
         imageURL: 'images/team/members/BrunoSilva-',
-        job: ''
+        job: 'Produccion y Logistica'
     },
     {
         name: 'Carlos Fernandez',
         imageURL: 'images/team/members/CarlosFernandez-',
-        job: ''
+        job: 'Fotografía - Productor audiovisual'
     },
     {
         name: 'Charly Rossel',
         imageURL: 'images/team/members/CharlyRossel-',
-        job: ''
+        job: 'Contacto con empresas'
     },
     {
         name: 'Deysi Mamani',
         imageURL: 'images/team/members/DeysiMamani-',
-        job: ''
+        job: 'Fotografía - Productor audiovisual'
     },
     {
         name: 'Edgar Roca',
         imageURL: 'images/team/members/EdgarRoca-',
-        job: ''
+        job: 'Redacción'
     },
     {
         name: 'Ever Huanca',
         imageURL: 'images/team/members/EverHuanca-',
-        job: ''
+        job: 'Fotografía - Productor audiovisual'
     },
     {
         name: 'Fabiana López',
         imageURL: 'images/team/members/FabianaLopez-',
-        job: ''
+        job: 'Community Manager Instagram'
     },
     {
         name: 'Gabriela Duran',
         imageURL: 'images/team/members/GabrielaDuran-',
-        job: ''
+        job: 'Supervisión de redacción de textos'
     },
     {
         name: 'Harold Morales',
         imageURL: 'images/team/members/HaroldMorales-',
-        job: ''
+        job: 'Edición - Animación'
     },
     {
         name: 'Jonathan Granados',
         imageURL: 'images/team/members/JonathanGranados-',
-        job: ''
+        job: 'Logística de Espacios'
     },
     {
         name: 'Jorge Coariti',
         imageURL: 'images/team/members/JorgeCoariti-',
-        job: ''
+        job: 'Redacción'
     },
     {
         name: 'Jose Luis Fuentes',
         imageURL: 'images/team/members/JoseLuisFuentes-',
-        job: ''
+        job: 'Logistica en Equipos Electronicos'
     },
     {
         name: 'Jose Vera',
         imageURL: 'images/team/members/JonathanGranados-',
-        job: ''
+        job: 'Contacto con empresas'
     },
     {
         name: 'Luis Perez',
         imageURL: 'images/team/members/LuisPerez-',
-        job: ''
+        job: 'Edición - Animación'
     },
     {
         name: 'Luis Quispe',
         imageURL: 'images/team/members/LuisQuispe-',
-        job: ''
+        job: 'Miembro de Comité de Curaduría'
     },
     {
         name: 'Mariam Aliaga',
         imageURL: 'images/team/members/MariamAliaga-',
-        job: ''
+        job: 'Miembro de Comité de Curaduría'
     },
     {
         name: 'Micaela Ortuño',
@@ -107,17 +107,17 @@ export const TEAM = [
     {
         name: 'Moira Cornejo',
         imageURL: 'images/team/members/MoiraCornejo-',
-        job: ''
+        job: 'Cotizaciones'
     },
     {
         name: 'Noelia Gutierrez',
         imageURL: 'images/team/members/NoeliaGutierrez-',
-        job: ''
+        job: 'Community Manager Facebook'
     },
     {
         name: 'Reiza Paco',
         imageURL: 'images/team/members/ReizaPaco-',
-        job: ''
+        job: 'Finanzas y Legal'
     },
     {
         name: 'Sergio Guachalla',
@@ -127,11 +127,11 @@ export const TEAM = [
     {
         name: 'Silvio Tufiño',
         imageURL: 'images/team/members/SilvioTufinho-',
-        job: ''
+        job: 'Logística en Acreditaciones'
     },
     {
         name: 'Wara Paco',
         imageURL: 'images/team/members/WaraPaco-',
-        job: ''
+        job: 'Contacto hoteles y empresas'
     }
 ];

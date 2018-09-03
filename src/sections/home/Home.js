@@ -58,7 +58,7 @@ export default class Home extends React.Component{
                             </div>
                         </div>
                         <div className="column is-2" />
-                        <div className="column is-8">
+                        <div className="column is-8x">
                             <div className="section-header">
                                 <h1 className="name title">TEDxUMSA</h1>
                                 <h2 className="year subtitle is-3">2018</h2>
