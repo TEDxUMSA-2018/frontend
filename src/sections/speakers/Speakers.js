@@ -106,7 +106,7 @@ export default class Speakers extends React.Component{
                         </div>
                     </div>
                 </section>
-                <section className="version17 hero is-fullheight has-background-black">
+                {/* <section className="version17 hero is-fullheight has-background-black">
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <div className="columns is-multiline">
@@ -121,7 +121,7 @@ export default class Speakers extends React.Component{
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section className="version17 hero is-fullheight has-background-black">
                     <div className="hero-body">
                         <div className="container has-text-centered">
