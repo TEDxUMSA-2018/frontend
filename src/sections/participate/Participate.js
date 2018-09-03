@@ -2,10 +2,10 @@ import React from 'react';
 import Form from './components/forms';
 
 const ROLE = {
-    VOLUNTEER: 'volunteer',
-    SPEAKER: 'speaker',
-    SPONSOR: 'sponsor',
-    ATTENDEE: 'attendee',
+    VOLUNTEER: 'Voluntario',
+    SPEAKER: 'Speaker',
+    SPONSOR: 'Auspiciador',
+    ATTENDEE: 'Asistente',
     NULL: ''
 }
 
@@ -72,6 +72,7 @@ export default class Participate extends React.Component{
 
         return (
             <Form
+                role={this.state.form}
                 fields={{ name, contact }}
                 onCloseForm={this.onCloseForm}
             />
