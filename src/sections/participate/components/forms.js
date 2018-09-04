@@ -1,10 +1,19 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
+import $ from 'jquery';
+import FormSerializer, { serializeObject } from 'form-serializer';
+import Recaptcha from 'react-recaptcha';
+
+const BASE_URL = 'https://script.google.com/';
+const SCRIPT_ID = 'AKfycbx3xMSaqxLvT3e9nFV6-xwmWnTCS-iSJ1yOTapZO5fHK0ctnquP';
+const PATH = `macros/s/${SCRIPT_ID}/exec`;
 
 export default class Form extends Component {
     state = {
         nameField: '',
         contactField: '',
-        messageVisible: false
+        messageVisible: false,
+        loading: false,
+        isVerified: false
     }
 
     render() {
@@ -41,11 +50,12 @@ export default class Form extends Component {
     }
 
     renderForm = () => (
-        <Fragment>
+        <form id='test-form'>
             <div className="field">
                 <label className="label is-large">{this.props.fields.name}</label>
                 <div className="control">
                     <input 
+                        name='nombre'
                         className="input is-medium" 
                         type="text" 
                         placeholder="TEDxUMSA Lover"
@@ -59,7 +69,8 @@ export default class Form extends Component {
                 <label className="label is-large">{this.props.fields.contact}</label>
                 <div className="control">
                     <input 
-                        className="input is-medium" 
+                        name='email'
+                        className={`input is-medium ${!this.validateEmail(this.state.contactField) && 'is-danger'}`}
                         type="email" 
                         placeholder="tedxumsa-lover@algunlugar.com"
                         value={this.state.contactField}
@@ -67,24 +78,33 @@ export default class Form extends Component {
                     />
                 </div>
             </div>
+            <div className='field' style={{ display: 'flex', justifyContent: 'center' }}>
+                <Recaptcha
+                    sitekey="6Lce5m0UAAAAAAzcFWCgr29xE8t2ZYDgd5wdKS6C"
+                    render="explicit"
+                    hl='es'
+                    onloadCallback={this.onLoadCallback}
+                    verifyCallback={this.verifyCallback}
+                />
+            </div>
             <br/>
             <div className="control has-text-centered">
                 <button 
-                    className="button is-medium"
+                    className={`button is-medium ${this.state.loading ? 'is-loading' : ''}`}
                     onClick={this.onSubmitInformation}
-                    disabled={this.state.nameField === '' || this.state.contactField === ''}
+                    disabled={this.state.nameField === '' || !this.validateEmail(this.state.contactField) || !this.state.isVerified}
                 >
                     QUIERO RECIBIR INFORMACIÓN
                 </button>
             </div>
-        </Fragment>
+        </form>
     )
 
     renderMessage = () => (
         <div className="column is-8 is-offset-2">
             <article className="message is-success">
                 <div className="message-body">
-                    Gracias por querer ser parte de TEDxUMSA!. Tu información fue guardada correctamente, puedes seguir navegando por la página.
+                    Gracias por querer ser parte de TEDxUMSA!. Tu información fue guardada correctamente, nos comunicaremos pronto contigo, puedes seguir navegando por la página.
                 </div>
             </article>
             <br/>
@@ -94,17 +114,44 @@ export default class Form extends Component {
     onNameChange = e => {
         this.setState({
             nameField: e.target.value
-        })
+        });
     }
     onEmailChange = e => {
         this.setState({
             contactField: e.target.value
-        })
+        });
     }
-    onSubmitInformation = () => {
-        this.setState({
-            messageVisible: true
-        })
+    onSubmitInformation = (e) => {
+        const reactContext = this;
+        const $form = $('form#test-form');
+        const url = `${BASE_URL}${PATH}`;
+        const data = {
+            ...$form.serializeObject(),
+            hora: new Date(),
+            tipo: this.props.role
+        }
+        reactContext.setState({
+            loading: true
+        });
+        e.preventDefault();
+        
+        const jqxhr = $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            data
+        }).done(
+            // do something
+            function() { 
+                reactContext.setState({
+                    messageVisible: true,
+                    loading: false,
+                    nameField: '',
+                    contactField: '',
+                    isVerified: false
+                }); 
+            }
+        );
     }
     onDismissInformation = () => {
         this.setState({
@@ -113,5 +160,19 @@ export default class Form extends Component {
     }
     hideForm = () => {
         this.props.onCloseForm();
+    }
+    validateEmail = (email) => {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+    onLoadCallback = () => {
+        console.log('Done!!!!');
+    };
+    verifyCallback = (response) => {
+        if(response){
+            this.setState({
+                isVerified: true
+            })
+        }
     }
 }
