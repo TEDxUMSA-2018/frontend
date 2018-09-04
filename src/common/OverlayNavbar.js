@@ -71,7 +71,7 @@ class OverlayNavbar extends React.Component{
             <div className="navbar-item">
                 <div className="field is-grouped is-grouped-multiline">
                     <p className="control">
-                        <button className="button is-danger is-rounded" style={{ visibility: 'hidden' }}>
+                        <button className="button is-danger is-rounded" style={{ display: 'none' }}>
                             <strong>Auspiciar</strong>
                         </button>
                     </p>

@@ -11,9 +11,10 @@
 			margin-bottom: 1rem;
 		}
 		.day-number {
-			font-size: 10vw;
+			font-size: 8vw;
 			font-family: $balooFont;
-			color: $pinkColor;
+			color: #FB3858;
+			font-weight: 500;
 		}
 		.days {
 			font-size: 3vw;
@@ -23,15 +24,20 @@
 		.name {
 			font-size: 7vw;
 			font-family: $balooFont;
-			color: $blackColor
+			color: #171717;
+			font-weight: 100;
 		}
 		.year {
 			font-size: 7vw;
 			font-family: $balooFont;
-			color: $greenColor;
+			color: #73D6FF;
 		}
 	}
 	.container-mobile{
+		.name {
+			color: #171717;
+			font-weight: 100;
+		}
 		.name, .year {
 			text-align: center;
 		}
@@ -47,14 +53,15 @@
 		}
 		.year {
 			font-family: $balooFont;
-			color: $greenColor;
+			color: #73D6FF;
 			font-size: 12vw !important;
 		}
         .day-number {
-            color: $pinkColor
+			color: #FB3858;
+			font-weight: 500;
 		}
 		.days {
-			font-size: 6vw;
+			font-size: 4vw;
 			color: $blackColor;
 		}
 	}
@@ -74,6 +81,10 @@
 					}
 					h1 {
 						margin-bottom: 0;
+						font-size: 120px !important;
+						span{
+							font-weight: 100;
+						}
 					}
 					.content-text {
 						padding: 2vw 6vw;
@@ -129,6 +140,14 @@
 		dd {
 			margin-bottom: 4vh;
 			font-size: 4vh;
+		}
+	}
+}
+
+@media (min-width: 2369px){ 
+	.home-page {
+		.day-number {
+			font-size: 7.5vw !important;
 		}
 	}
 }

@@ -85,7 +85,7 @@ export default class Home extends React.Component{
             <div className="column column-style is-6 version">
                 <div>
                     <div className="has-text-centered">
-                        <h1 className="title is-size-1 is-centered">2<span className="is-size-5">da</span></h1>
+                        <h1 className="title is-size-1 is-centered">2<span className="is-size-1">da</span></h1>
                         <h2 className="subtitle is-size-1 is-centered">versión</h2>
                     </div>
                     <div className="is-vcentered content content-text">
