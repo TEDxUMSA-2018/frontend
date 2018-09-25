@@ -78,9 +78,20 @@ export default class Sponsors extends React.Component{
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <h1 className="title is-size-1 has-text-black-bis">
-                                Auspiciadores TEDxUMSA 2018
+                                Auspiciadores TEDxUMSA <span className='aus18'>2018</span>
                             </h1>
                             <img src="images/2018.png" alt="Auspiciadores 2017"/>
+                        </div>
+                    </div>
+                </section>
+                <section className="hero is-fullheight is-primary has-background-white">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title is-size-1 has-text-black-bis">
+                                Auspiciadores TEDxUMSA <span className='aus17'>2017</span>
+                            </h1>
+                            <br/>
+                            <img src="images/2017.jpg" alt="Auspiciadores 2017"/>
                         </div>
                     </div>
                 </section>

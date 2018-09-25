@@ -58,7 +58,7 @@ export default class Form extends Component {
                         name='nombre'
                         className="input is-medium" 
                         type="text" 
-                        placeholder="TEDxUMSA Lover"
+                        placeholder="Juan Perez"
                         value={this.state.nameField}
                         onChange={this.onNameChange}
                     />
@@ -72,7 +72,7 @@ export default class Form extends Component {
                         name='email'
                         className={`input is-medium ${!this.validateEmail(this.state.contactField) && 'is-danger'}`}
                         type="email" 
-                        placeholder="tedxumsa-lover@algunlugar.com"
+                        placeholder="juan.perez@ejemplo.com"
                         value={this.state.contactField}
                         onChange={this.onEmailChange}
                     />

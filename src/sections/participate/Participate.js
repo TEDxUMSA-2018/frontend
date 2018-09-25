@@ -44,8 +44,15 @@ export default class Participate extends React.Component{
                         Auspiciador
                     </h1>
                     <br/>
-                    <h4 className="is-size-3 has-text-right" onClick={() => this.onSelectRole(ROLE.ATTENDEE)}>
-                        Deseo asistir al evento
+                    <h4 className="is-size-3 has-text-right">
+                        <a 
+                            className='form-link'
+                            style={{ textDecoration: 'none' }} 
+                            href='https://goo.gl/forms/6lB9EGyu3O5zoV3C3' 
+                            target='_blank'
+                        >
+                            Deseo asistir al evento
+                        </a>
                     </h4>
                 </div>
             </div>

@@ -39,4 +39,11 @@
             }
         }
     }
+    .form-link {
+        color: $pinkColor;
+        text-decoration: none !important;
+        :visited{
+            color: $pinkColor !important;
+        }
+    }
 }
