@@ -26,7 +26,7 @@ class Countdown extends React.Component {
     return (
       <React.Fragment>
           <h2 className="days subtitle is-3">faltan</h2>
-          <h1 className="day-number title">{remainingDays}</h1>
+          <h1 className="day-number title">0</h1>
         <h2 className="days subtitle is-3">días</h2>
       </React.Fragment>
     );
