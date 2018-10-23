@@ -76,6 +76,53 @@ const SPEAKERS_2017 = [{
     videoId: 'MtwK8YBWvvM'
 }];
 
+const SPEAKERS_2018 = [{
+    name: 'Ariel Amaru',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/ArielAmaru1.png',
+    videoId: ''
+}, {
+    name: 'Carlos Jordan',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/CarlosJordan2.png',
+    videoId: ''
+}, {
+    name: 'Giovanna Almanza',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/GiovannaAlmanza1.png',
+    videoId: ''
+}, {
+    name: 'Guide Choquetanga',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/GuideChoquetanga2.png',
+    videoId: ''
+}, {
+    name: 'Gustavo Orihuela',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/GustavoOrihuela1.png',
+    videoId: ''
+}, {
+    name: 'Mauricio Dulon',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/MauricioDulon2.png',
+    videoId: ''
+}, {
+    name: 'Miguel Carpio',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/MiguelCarpio1.png',
+    videoId: ''
+}, {
+    name: 'Sofia Mendez',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/SofiaMendez2.png',
+    videoId: ''
+}, {
+    name: 'Susana Condori',
+    videoTitle: '',
+    imageURL: 'images/speakers/2018/SusanaCondori1.png',
+    videoId: ''
+}]
+
 export default class Speakers extends React.Component{
     render(){
         return (
@@ -89,11 +136,28 @@ export default class Speakers extends React.Component{
                         </div>
                     </div>
                 </section>
-                <section className="version18 hero is-fullheight">
+                {/* <section className="version18 hero is-fullheight">
                     <div className="hero-body">
                         <div className="container has-text-centered">
                             <img src="/images/magnify.svg" alt="https://loading.io"/>
                             <h1 className="title messages">{messages[0]}</h1>
+                        </div>
+                    </div>
+                </section> */}
+                <section className="version18 hero is-fullheight">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <div className="columns is-multiline">
+                                {SPEAKERS_2018.map( (speaker, index) => (
+                                    <PersonCard
+                                        key={`speaker18-${index}`}
+                                        imageURL={speaker.imageURL}
+                                        name={speaker.name}
+                                        description={speaker.title}
+                                        colWidth={4}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -106,22 +170,6 @@ export default class Speakers extends React.Component{
                         </div>
                     </div>
                 </section>
-                {/* <section className="version17 hero is-fullheight has-background-black">
-                    <div className="hero-body">
-                        <div className="container has-text-centered">
-                            <div className="columns is-multiline">
-                                {SPEAKERS_2017.map( (speaker, index) => (
-                                    <PersonCard
-                                        key={`speaker17-${index}`}
-                                        imageURL={speaker.imageURL}
-                                        name={speaker.name}
-                                        description={speaker.title}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
                 <section className="version17 hero is-fullheight has-background-black">
                     <div className="hero-body">
                         <div className="container has-text-centered">

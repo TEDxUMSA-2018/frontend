@@ -1,22 +1,28 @@
 import React from 'react';
 import { PersonCard } from '../../common';
 import { TEAM } from "./teamList";
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
+
+const EVENT_IMAGES = Array(10);
+EVENT_IMAGES.fill('foto', 0, 10);
 
 export default class Team extends React.Component{
-    render(){
+    render() {
         return (
             <div className="team-page">
-                <section className="hero legend is-fullheight">
-                    <div className="hero-body">
-                        <div className="container has-text-centered">
-                            <h2 className="who subtitle is-size-2">
-                                Nosotros hacemos
-                            </h2>
-                            <h1 className="event title is-size-1">
-                                TEDxUMSA
-                            </h1>
-                        </div>
-                    </div>
+                <section className="hero is-fullheight">
+                    <Slider 
+                        className="slider-wrapper"
+                        autoplay={2000}
+                    >
+                        {EVENT_IMAGES.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`slider-content image-${index + 1}`}
+                            />
+                        ))}
+                    </Slider>
                 </section>
                 <section className="hero is-fullheight has-background-black">
                     <div className="hero-body">
@@ -29,6 +35,7 @@ export default class Team extends React.Component{
                                         name={person.name}
                                         description={person.job}
                                         lead={false}
+                                        colWidth={3}
                                     />
                                 ) )}
                             </div>
@@ -36,6 +43,6 @@ export default class Team extends React.Component{
                     </div>
                 </section>
             </div>
-        )
+        );
     }
 }

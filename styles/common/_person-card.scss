@@ -1,8 +1,11 @@
 .person-card{
     box-shadow: none;
 }
+.card {
+    background-color: rgba($color: $whiteColor, $alpha: 0) !important;
+}
 .card-content{
     * {
-        color: $whiteColor !important;
+        color: rgba($color: $whiteColor, $alpha: 1.0) !important;
     }
 }
