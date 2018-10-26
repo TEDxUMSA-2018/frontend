@@ -1,28 +1,23 @@
 export const TEAM = [
     {
+        name: 'Alejandro Mancilla',
+        imageURL: 'images/team/members/AlejandroMancilla-',
+        job: 'Logísitca en transporte'
+    },
+    {
         name: 'Ana Huiza',
         imageURL: 'images/team/members/AnaHuiza-',
         job: 'Fotografía - Productor audiovisual'
     },
     {
-        name: 'Ana Quispe',
-        imageURL: 'images/team/members/AnaQuispe-',
-        job: 'Licenciataria'
+        name: 'Ana Escobar',
+        imageURL: 'images/team/members/AnaEscobar-',
+        job: 'Contacto catering'
     },
     {
-        name: 'Andres Mamani',
-        imageURL: 'images/team/members/AndresMamani-',
-        job: 'Media'
-    },
-    {
-        name: 'Angelica Quispe',
-        imageURL: 'images/team/members/AngelicaQuispe-',
-        job: 'Relaciones Externas'
-    },
-    {
-        name: 'Bruno Silva',
-        imageURL: 'images/team/members/BrunoSilva-',
-        job: 'Produccion y Logistica'
+        name: 'Angeles Ortuño',
+        imageURL: 'images/team/members/AngelesOrtunho-',
+        job: 'Miembro de Comité de Curaduría'
     },
     {
         name: 'Carlos Fernandez',
@@ -32,7 +27,7 @@ export const TEAM = [
     {
         name: 'Charly Rossel',
         imageURL: 'images/team/members/CharlyRossel-',
-        job: 'Contacto con empresas'
+        job: 'Logistica de espacios'
     },
     {
         name: 'Deysi Mamani',
@@ -57,7 +52,7 @@ export const TEAM = [
     {
         name: 'Gabriela Duran',
         imageURL: 'images/team/members/GabrielaDuran-',
-        job: 'Supervisión de redacción de textos'
+        job: 'Redacción - Contacto con empresas'
     },
     {
         name: 'Harold Morales',
@@ -81,8 +76,18 @@ export const TEAM = [
     },
     {
         name: 'Jose Vera',
-        imageURL: 'images/team/members/JonathanGranados-',
+        imageURL: 'images/team/members/JoseVera-',
         job: 'Contacto con empresas'
+    },
+    {
+        name: 'Julio Ticona',
+        imageURL: 'images/team/members/JulioTicona-',
+        job: 'Cotizaciones'
+    },
+    {
+        name: 'Luis Maldonado',
+        imageURL: 'images/team/members/LuisMaldonado-',
+        job: 'Logistica de espacios'
     },
     {
         name: 'Luis Perez',
@@ -90,9 +95,9 @@ export const TEAM = [
         job: 'Edición - Animación'
     },
     {
-        name: 'Luis Quispe',
-        imageURL: 'images/team/members/LuisQuispe-',
-        job: 'Miembro de Comité de Curaduría'
+        name: 'Maria Belén Mérida',
+        imageURL: 'images/team/members/MariaMerida-',
+        job: 'Finanzas'
     },
     {
         name: 'Mariam Aliaga',
@@ -100,9 +105,9 @@ export const TEAM = [
         job: 'Miembro de Comité de Curaduría'
     },
     {
-        name: 'Micaela Ortuño',
-        imageURL: 'images/team/members/MicaelaOrtunho-',
-        job: 'Curaduría'
+        name: 'Marco Machicado',
+        imageURL: 'images/team/members/MarcoMachicado-',
+        job: 'Coordinador Área legal'
     },
     {
         name: 'Moira Cornejo',
@@ -110,19 +115,24 @@ export const TEAM = [
         job: 'Cotizaciones'
     },
     {
-        name: 'Noelia Gutierrez',
-        imageURL: 'images/team/members/NoeliaGutierrez-',
-        job: 'Community Manager Facebook'
+        name: 'Monica Medina',
+        imageURL: 'images/team/members/MonicaMedina-',
+        job: 'Miembro de Comité de Curaduría'
     },
     {
-        name: 'Reiza Paco',
-        imageURL: 'images/team/members/ReizaPaco-',
-        job: 'Finanzas y Legal'
+        name: 'Monica Medina',
+        imageURL: 'images/team/members/MonicaMedina-',
+        job: 'Miembro de Comité de Curaduría'
     },
     {
-        name: 'Sergio Guachalla',
-        imageURL: 'images/team/members/SergioGuachalla-',
-        job: 'Marketing'
+        name: 'Nely Mamani',
+        imageURL: 'images/team/members/NelyMamani-',
+        job: 'Logistica de espacios'
+    },
+    {
+        name: 'Pamela Parra',
+        imageURL: 'images/team/members/PamelaParra-',
+        job: 'Área legal'
     },
     {
         name: 'Silvio Tufiño',
@@ -132,6 +142,11 @@ export const TEAM = [
     {
         name: 'Wara Paco',
         imageURL: 'images/team/members/WaraPaco-',
-        job: 'Contacto hoteles y empresas'
+        job: 'Contacto con empresas'
+    },
+    {
+        name: 'Wara Sotomayor',
+        imageURL: 'images/team/members/WaraSotomayor-',
+        job: 'Contacto con empresas - Coord. Whatsapp'
     }
 ];

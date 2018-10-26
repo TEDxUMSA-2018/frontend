@@ -78,47 +78,47 @@ const SPEAKERS_2017 = [{
 
 const SPEAKERS_2018 = [{
     name: 'Ariel Amaru',
-    videoTitle: '',
+    videoTitle: 'Nuestro desafío',
     imageURL: 'images/speakers/2018/ArielAmaru1.png',
     videoId: ''
 }, {
     name: 'Carlos Jordan',
-    videoTitle: '',
+    videoTitle: 'Economía Digital en Bolivia',
     imageURL: 'images/speakers/2018/CarlosJordan2.png',
     videoId: ''
 }, {
     name: 'Giovanna Almanza',
-    videoTitle: '',
+    videoTitle: 'Investigación y desarrollo de productos Fitoterapéuticos',
     imageURL: 'images/speakers/2018/GiovannaAlmanza1.png',
     videoId: ''
 }, {
     name: 'Guide Choquetanga',
-    videoTitle: '',
+    videoTitle: 'Regalar con el corazón',
     imageURL: 'images/speakers/2018/GuideChoquetanga2.png',
     videoId: ''
 }, {
     name: 'Gustavo Orihuela',
-    videoTitle: '',
+    videoTitle: 'Música, identidad y diversidad',
     imageURL: 'images/speakers/2018/GustavoOrihuela1.png',
     videoId: ''
 }, {
     name: 'Mauricio Dulon',
-    videoTitle: '',
+    videoTitle: 'Transformación Digital de las Industrias',
     imageURL: 'images/speakers/2018/MauricioDulon2.png',
     videoId: ''
 }, {
     name: 'Miguel Carpio',
-    videoTitle: '',
+    videoTitle: 'Fuera de lugar',
     imageURL: 'images/speakers/2018/MiguelCarpio1.png',
     videoId: ''
 }, {
     name: 'Sofia Mendez',
-    videoTitle: '',
+    videoTitle: 'Y todo por mirar el cielo',
     imageURL: 'images/speakers/2018/SofiaMendez2.png',
     videoId: ''
 }, {
     name: 'Susana Condori',
-    videoTitle: '',
+    videoTitle: 'Susana, has roto las barreras',
     imageURL: 'images/speakers/2018/SusanaCondori1.png',
     videoId: ''
 }]
@@ -153,7 +153,7 @@ export default class Speakers extends React.Component{
                                         key={`speaker18-${index}`}
                                         imageURL={speaker.imageURL}
                                         name={speaker.name}
-                                        description={speaker.title}
+                                        description={speaker.videoTitle}
                                         colWidth={4}
                                     />
                                 ))}

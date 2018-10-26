@@ -1,6 +1,7 @@
 import React from 'react';
 import { PersonCard } from '../../common';
 import { TEAM } from "./teamList";
+import { LEADS } from "./leadsList";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
@@ -27,6 +28,22 @@ export default class Team extends React.Component{
                 <section className="hero is-fullheight has-background-black">
                     <div className="hero-body">
                         <div className="container has-text-centered">
+                            <div className="columns is-multiline">
+                                {LEADS.map((person, index) => (
+                                    <PersonCard
+                                        key={`team-${index}`}
+                                        imageURL={index % 2 === 0 ? `${person.imageURL}bw.jpg` : `${person.imageURL}rw.jpg`}
+                                        name={person.name}
+                                        description={person.job}
+                                        lead={false}
+                                        colWidth={3}
+                                    />
+                                ))}
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                             <div className="columns is-multiline">
                                 {TEAM.map( (person, index) => (
                                     <PersonCard
