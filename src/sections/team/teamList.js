@@ -2,7 +2,7 @@ export const TEAM = [
     {
         name: 'Alejandro Mancilla',
         imageURL: 'images/team/members/AlejandroMancilla-',
-        job: 'Logísitca en transporte'
+        job: 'Logística en transporte'
     },
     {
         name: 'Ana Huiza',
@@ -45,11 +45,6 @@ export const TEAM = [
         job: 'Fotografía - Productor audiovisual'
     },
     {
-        name: 'Fabiana López',
-        imageURL: 'images/team/members/FabianaLopez-',
-        job: 'Community Manager Instagram'
-    },
-    {
         name: 'Gabriela Duran',
         imageURL: 'images/team/members/GabrielaDuran-',
         job: 'Redacción - Contacto con empresas'
@@ -60,14 +55,14 @@ export const TEAM = [
         job: 'Edición - Animación'
     },
     {
+        name: 'Jeanine Blanco',
+        imageURL: 'images/team/members/JeanineBlanco-',
+        job: 'Content Manager'
+    },
+    {
         name: 'Jonathan Granados',
         imageURL: 'images/team/members/JonathanGranados-',
         job: 'Logística de Espacios'
-    },
-    {
-        name: 'Jorge Coariti',
-        imageURL: 'images/team/members/JorgeCoariti-',
-        job: 'Redacción'
     },
     {
         name: 'Jose Luis Fuentes',
@@ -113,11 +108,6 @@ export const TEAM = [
         name: 'Moira Cornejo',
         imageURL: 'images/team/members/MoiraCornejo-',
         job: 'Cotizaciones'
-    },
-    {
-        name: 'Monica Medina',
-        imageURL: 'images/team/members/MonicaMedina-',
-        job: 'Miembro de Comité de Curaduría'
     },
     {
         name: 'Monica Medina',
