@@ -1,7 +1,6 @@
 import React from 'react';
 import { PersonCard } from '../../common';
-import { TEAM } from "./teamList";
-import { LEADS } from "./leadsList";
+import { TEAM, LEADS } from "../../constants/team";
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
