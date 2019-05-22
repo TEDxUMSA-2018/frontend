@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  frontend:
+    build: .
+    image: tedxumsa
+    networks:
+      - reverse-proxy
+    restart: always
+    environment:
+      VIRTUAL_HOST: www.tedxumsa.org
+      LETSENCRYPT_HOST: www.tedxumsa.org
+      LETSENCRYPT_EMAIL: alexandro@autistici.org
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
