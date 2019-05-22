@@ -41,7 +41,7 @@ export default class Home extends React.Component{
         let map = new googleMaps.Map(mapContainer, mapConfig);
         const mapMarker = new googleMaps.Marker({
             position: mapLatLon,
-            title: 'TEDxUMSA 2018'
+            title: 'TEDxUMSA 2019'
         });
         mapMarker.setMap(map);
     }
@@ -54,14 +54,14 @@ export default class Home extends React.Component{
                     <div className="columns is-vcentered" style={{ marginTop: 70 }}>
                         <div className="column is-2">
                             <div className="section-header has-text-centered">
-                                <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
+                                <Countdown deadline={new Date("Oct 13, 2019 08:00:00").getTime()} />
                             </div>
                         </div>
                         <div className="column is-2" />
                         <div className="column is-8x">
                             <div className="section-header">
                                 <h1 className="name title">TEDxUMSA</h1>
-                                <h2 className="year subtitle is-3">2018</h2>
+                                <h2 className="year subtitle is-3">2019</h2>
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,8 @@ export default class Home extends React.Component{
                 <div className="container container-mobile is-vcentered is-hidden-desktop">
                     <div className="is-vcentered" style={{ marginTop: 70 }}>
                         <h1 className="name title">TEDxUMSA</h1>
-                        <h2 className="year subtitle is-3">2018</h2>
-                        <Countdown deadline={new Date("Oct 13, 2018 08:00:00").getTime()} />
+                        <h2 className="year subtitle is-3">2019</h2>
+                        <Countdown deadline={new Date("Oct 13, 2019 08:00:00").getTime()} />
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@ export default class Home extends React.Component{
             <div className="column column-style is-6 version">
                 <div>
                     <div className="has-text-centered">
-                        <h1 className="title is-size-1 is-centered">2<span className="is-size-1">da</span></h1>
+                        <h1 className="title is-size-1 is-centered">3<span className="is-size-1">ra</span></h1>
                         <h2 className="subtitle is-size-1 is-centered">versión</h2>
                     </div>
                     <div className="is-vcentered content content-text">
@@ -149,7 +149,7 @@ export default class Home extends React.Component{
                         <dt className="is-size-2">HORA Y FECHA</dt>
                         <hr/>
                         <dd>
-                            <p>Sábado 13 de Octubre, 2018</p>
+                            <p>Sábado 13 de Octubre, 2019</p>
                             <p>A partir de las 8:00</p>
                         </dd>
                     </dl>

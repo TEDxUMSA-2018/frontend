@@ -34,7 +34,7 @@ class Footer extends React.Component{
                     <img alt="TEDxUMSA" role="presentation" src="/images/TEDxUMSA5.png"/>
                 </div>
             </a>
-            <p>© 2017 - 2018 TEDxUMSA</p>
+            <p>© 2017 - 2019 TEDxUMSA</p>
         </div>
     );
     renderMenuRoutes = () => (
