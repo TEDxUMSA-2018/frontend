@@ -37,8 +37,9 @@ export default class Participate extends React.Component{
                     <h1 className="title is-size-1" onClick={() => this.onSelectRole(ROLE.VOLUNTEER)}>
                         Voluntario
                     </h1>
-                    <h1 className="title is-size-1" onClick={() => this.onSelectRole(ROLE.SPEAKER)}>
-                        Expositor
+                    {/* <h1 className="title is-size-1" onClick={() => this.onSelectRole(ROLE.SPEAKER)}> */}
+                    <h1 className="title is-size-1">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSftraXa5CLkMC_2EaLQLcP6WIw3KPTOAcyvL4WK1Cdp4t88Qw/viewform" target="_blank">Expositor</a>
                     </h1>
                     <h1 className="title is-size-1" onClick={() => this.onSelectRole(ROLE.SPONSOR)}>
                         Auspiciador
