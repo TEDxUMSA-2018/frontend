@@ -61,7 +61,7 @@ export default class Home extends React.Component{
                         <div className="column is-8x">
                             <div className="section-header">
                                 <h1 className="name title">TEDxUMSA</h1>
-                                <h2 className="year subtitle is-3">2019</h2>
+                                <h2 className="year subtitle is-3">16/08/2019</h2>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default class Home extends React.Component{
                 <div className="container container-mobile is-vcentered is-hidden-desktop">
                     <div className="is-vcentered" style={{ marginTop: 70 }}>
                         <h1 className="name title">TEDxUMSA</h1>
-                        <h2 className="year subtitle is-3">2019</h2>
+                        <h2 className="year subtitle is-3">16/08/2019</h2>
                         <Countdown deadline={new Date("Aug 16, 2019 08:00:00").getTime()} />
                     </div>
                 </div>
@@ -150,7 +150,7 @@ export default class Home extends React.Component{
                         <hr/>
                         <dd>
                             <p>Viernes 16 de Agosto, 2019</p>
-                            <p>A partir de las 8:00</p>
+                            <p>A partir de las 16:00</p>
                         </dd>
                     </dl>
                     <h3 className="is-size-2 has-text-centered">NO FALTES!</h3>

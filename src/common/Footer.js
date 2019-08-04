@@ -65,6 +65,7 @@ class Footer extends React.Component{
                 <p className="menu-label">Contacto</p>
                 <ul className="menu-list">
                     <li><a href="tel:+59171934799">+591 719 34 799</a></li>
+                    <li><a href="mailto:tedxumsa@gmail.com">tedxumsa@gmail.com</a></li>
                     <li className="is-size-7" style={{padding: '0.5em 0.75em'}}>PARANINFO UNIVERSITARIO - UMSA</li>
                     <li className="is-size-7" style={{padding: '0.5em 0.75em'}}>AV. VILLAZÓN N° 1995, PLAZA DEL BICENTENARIO</li>
                     <li className="is-size-7" style={{padding: '0.5em 0.75em'}}>LA PAZ - BOLIVIA</li>
